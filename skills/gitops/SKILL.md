@@ -1,16 +1,16 @@
 ---
 name: gitops
-description: Execute common Git workflow actions using consistent conventions. Use this when the request involves standard Git operations such as creating branches, synchronizing, committing or pushing changes, applying or pushing cherry-picks, cleaning up branches, or opening pull requests.
+description: Execute common Git actions using consistent conventions. Use this when the request involves standard Git operations such as creating branches, synchronizing, committing or pushing changes, applying or pushing cherry-picks, cleaning up branches, or opening pull requests.
 metadata:
   version: 1.0.0
   author: xbhel
 ---
 
-# GitOps
+# Git Operations
 
 ## Goal
 
-Execute common Git workflow actions using consistent conventions for branch creation, commits, pushes, cherry-picking, branch cleanup, and pull request creation.
+Execute common Git actions using consistent conventions for branch creation, commits, pushes, cherry-picking, branch cleanup, and pull request creation.
 
 ## Action References
 
