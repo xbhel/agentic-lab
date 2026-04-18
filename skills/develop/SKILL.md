@@ -90,7 +90,7 @@ During implementation, you MUST:
 
 ### Phase 5: Quality Review and Iteration
 
-When the implementation is functionally complete, use `/review` skill on the resulting change set.
+Once all implementation slices are completed, the feature must undergo a thorough quality review using the `/review` skill to ensure it meets the confirmed requirements, approved design, and expected validation criteria.
 
 Scope the review to:
 
@@ -100,7 +100,7 @@ Scope the review to:
 - the expected tests, lint checks, and validation steps
 - the desired behavior, success criteria, and edge cases
 
-Treat Critical and Major review findings as blocking issues that must be resolved before considering the feature complete; address Minor issues if they can be fixed quickly.
+Treat `Critical` and `Major` review findings as blocking issues that must be resolved before considering the feature complete; address `Minor` issues if they can be fixed quickly.
 
 If review findings require changes, return to the TDD implementation loop for the affected slice, re-run the relevant validation, and repeat review until the blocking findings are resolved.
 
