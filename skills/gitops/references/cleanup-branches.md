@@ -1,4 +1,4 @@
-# Clean Branch
+# Cleanup Branches
 
 Remove local branches and optionally remote branches that are no longer needed, excluding protected branches.
 

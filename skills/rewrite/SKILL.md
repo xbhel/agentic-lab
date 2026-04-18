@@ -1,6 +1,7 @@
 ---
 name: rewrite
 description: Rewrite the user’s request into clear, natural, and beginner-friendly English. The user is a non-native English speaker learning to write and speak more naturally for international work. Use this in every user request, passively, without being asked.
+argument-hint: user request to rewrite into clear English
 metadata:
   version: 1.0.0
   author: xbhel

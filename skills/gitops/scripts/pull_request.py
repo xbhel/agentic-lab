@@ -266,8 +266,9 @@ class AzureDevOpsProvider(PlatformProvider):
             )
             return reviewer, response
 
+        reviewer = ""
         reviewer_map: dict[str, str] = {}
-        requests = [lookup(reviewer) for reviewer in reviewers]
+        requests = [lookup(x) for x in reviewers]
         for request in asyncio.as_completed(requests):
             try:
                 reviewer, response = await request
@@ -596,7 +597,7 @@ async def get_credentials(remote_url: str, cwd: str | None = None) -> str:
 
     Raises RuntimeError if credentials cannot be found in either place.
     """
-    access_token = os.getenv("GIT_PAT")
+    access_token = os.getenv("GIT_ACCESS_TOKEN")
     if not access_token:
         cred_url = _ssh_url_to_https(remote_url)
         creds_input = f"url={cred_url}\n\n".encode()
@@ -608,7 +609,7 @@ async def get_credentials(remote_url: str, cwd: str | None = None) -> str:
     if not access_token:
         logger.error(
             "Git credentials not found for remote '%s'"
-            " — set GIT_PAT or configure a credential helper",
+            " — set GIT_ACCESS_TOKEN or configure a credential helper",
             remote_url,
         )
         raise RuntimeError(

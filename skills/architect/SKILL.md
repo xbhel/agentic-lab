@@ -1,6 +1,7 @@
 ---
 name: architect
 description: Design a clear, extensible, and maintainable architecture proposal with explicit boundaries, responsibilities, integration points, and scalability considerations. Use this before implementation, integration, refactoring, system design, estimation, or review when architectural decisions or boundary definitions are required.
+argument-hint: feature or component to architect
 metadata:
   version: 1.0.1
   author: xbhel
