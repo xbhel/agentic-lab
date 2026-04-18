@@ -7,6 +7,8 @@ metadata:
   author: xbhel
 ---
 
+# Simplify Code
+
 ## Goal
 
 Make existing code easier to read, review, and maintain while preserving exact behavior. 
@@ -28,7 +30,7 @@ Default scope to recently modified or directly relevant code unless the user exp
 
 ### Optimize for clarity
 
-- Prefer readable, explicit code over clever or compact code.
+- Prefer readable, explicit code over clever or compact code
 - Replacing overly complex expressions with clearer structures
 - Using clear, descriptive naming for variables and functions
 - Grouping related logic together

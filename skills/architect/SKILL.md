@@ -7,7 +7,7 @@ metadata:
   author: xbhel
 ---
 
-# Architect
+# Architect Design
 
 ## Goal
 
