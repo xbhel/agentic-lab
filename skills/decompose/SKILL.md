@@ -9,7 +9,7 @@ metadata:
     - clarify
 ---
 
-# Decompose
+# Decompose Work
 
 ## Goal
 
