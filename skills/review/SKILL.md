@@ -124,4 +124,3 @@ Produce a concise review with this structure:
 4. Verdict: `pass`, `pass with notes`, or `re-review required`
 
 **IMPORTANT:** If no findings are discovered, MUST state this explicitly and note any remaining validation gaps or residual risk.
-
