@@ -30,4 +30,4 @@ Users typically invoke an **agent** or **skill** by name. If input parameters ar
 
 - NEVER ask for info that can be inferred or fetched via tools.
 - NEVER assume completeness—check for missing inputs and request them explicitly.
-- MUST call the `/rewrite` skill on every new user message before any other work begins, and use the rewritten request as the source of truth for the current turn only.
+- MUST call the `/rewrite` skill on every new user message before any other work begins, and output it, then use the rewritten request as the source of truth for the current turn only.

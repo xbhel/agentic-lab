@@ -1,6 +1,7 @@
 ---
 name: guide
 description: Provide a clear, beginner-friendly guide of a topic the user wants to learn. Focus on what it is, how it works, key concepts, and the most important tips or best practices for beginners. USE FOR beginner guide, getting started, overview, introduction.
+argument-hint: topic to create a guide for
 metadata:
   version: 1.0.0
   author: xbhel

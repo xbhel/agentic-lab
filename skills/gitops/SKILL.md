@@ -1,6 +1,7 @@
 ---
 name: gitops
 description: Execute common Git actions using consistent conventions. Use this when the request involves standard Git operations such as creating branches, synchronizing, committing or pushing changes, applying or pushing cherry-picks, cleaning up branches, or opening pull requests.
+argument-hint: git action to perform
 metadata:
   version: 1.0.0
   author: xbhel
@@ -18,7 +19,7 @@ See the below reference when it match the user's request:
 
 - [create-branch.md](./references/create-branch.md): Creates a new working branch from a base branch using the shared naming convention
 - [commit-and-push.md](./references/commit-and-push.md): Commits changes to the current branch with a descriptive message and pushes to the remote repository
-- [cherry-pick.md](./references/cherry-pick.md): Cherry-picks selected commits onto a new branch created from the target branch and pushes it
+- [cherry-pick-and-push.md](./references/cherry-pick-and-push.md): Cherry-picks selected commits onto a new branch created from the target branch and pushes it
 - [cleanup-branches.md](./references/cleanup-branches.md): Deletes specified branches both locally and remotely to clean up stale branches
 - [open-pull-request.md](./references/open-pull-request.md): Opens a pull request from the current branch to a target branch with a descriptive title and body
 

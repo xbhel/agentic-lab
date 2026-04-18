@@ -1,4 +1,4 @@
-## Goal
+# Open Pull Request
 
 Open a pull request from a source branch to a target branch, using a repository template when available and adding reviewers or assignees when needed.
 
@@ -45,7 +45,7 @@ Fields are derived from the source branch name, user request, or `git log --onel
 
 **IMPORTANT:** ALWAYS run `uv run python "<skill_dir>/scripts/<tool>" --help` first to see available options.
 
-- skill_dir: absolute path to the `git-workflow` skill root
+- skill_dir: absolute path to the skill root
 - repo_root: absolute path to the repository root, from `git rev-parse --show-toplevel`
 
 Example usage:

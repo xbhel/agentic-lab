@@ -1,6 +1,7 @@
 ---
 name: analyze
 description: Analyze an existing codebase, or a specific area within a codebase, to build a clear, evidence-based understanding of how it works, how its parts interact, and how it can be changed or extended safely. Use this before implementation, debugging, testing, refactoring, design, estimation, or review.
+argument-hint: feature or module to analyze
 metadata:
   version: 1.0.0
   author: xbhel
