@@ -69,9 +69,13 @@ source .venv/bin/activate   # Windows: .venv\Scripts\activate
 
 - [/analyze](skills/analyze/SKILL.md): Analyze an existing codebase, or a specific area within a codebase, to build a clear, evidence-based understanding of how it works, how its parts interact, and how it can be changed or extended safely.
 - [/architect](skills/architect/SKILL.md): Design a clear, extensible, and maintainable architecture proposal with explicit boundaries, responsibilities, integration points, and scalability considerations.
-- [/clarify](skills/clarify/SKILL.md): Analyze the user’s requirements, resolve ambiguities, and align intent with existing codebase context when necessary.
-- [/decompose](skills/decompose/SKILL.md): Break requirements, features, or work into small, independently executable and verifiable tasks and produce an execution-ready plan with explicit dependencies and parallelism.
+- [/clarify](skills/clarify/SKILL.md): Analyze the user’s requirements, resolve ambiguities, and align intent with existing codebase context when necessary, then produce a structured specification for downstream design and implementation.
+- [/decompose](skills/decompose/SKILL.md): Break work into small, independently executable and verifiable tasks, then produce an execution-ready DAG plan with explicit dependencies, sequencing, and parallelism.
+- [/develop](skills/develop/SKILL.md): Orchestrate end-to-end feature delivery across clarification, design, planning, TDD implementation, review, and final handoff.
 - [/gitops](skills/gitops/SKILL.md): Execute common Git actions using consistent conventions for branching, committing, pushing, cleanup, and pull requests.
-- [/guide](skills/guide/SKILL.md): Provide a clear, beginner-friendly guide for a topic, focusing on what it is, how it works, and how to get started.
+- [/guide](skills/guide/SKILL.md): Provide a clear, beginner-friendly guide for a topic, focusing on what it is, how it works, key concepts, and how to get started.
+- [/review](skills/review/SKILL.md): Review code changes for correctness, regressions, requirement coverage, test quality, design alignment, and delivery risk.
 - [/rewrite](skills/rewrite/SKILL.md): Rewrite user requests into clear, natural, and beginner-friendly English.
 - [/simplify](skills/simplify/SKILL.md): Simplify and refine existing code for clarity, consistency, and maintainability without changing behavior.
+- [/tdd](skills/tdd/SKILL.md): Use test-driven development when implementing a feature or bugfix, starting with a failing test before writing production code.
+- [/vocab](skills/vocab/SKILL.md): Explain vocabulary words with pronunciation, part of speech, beginner-friendly meanings, morphology, common phrases, and example sentences.
