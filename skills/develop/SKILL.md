@@ -21,37 +21,40 @@ Provide a structured approach to developing new features. Instead of jumping str
 
 ## Context
 
-- This skill is an orchestrator. Delegate each phase to the appropriate specialist skill instead of repeating that skill's full workflow here.
-- Outputs from earlier phases become required inputs for later phases.
-- Keep the workflow proportional to the change. If a single specialized skill is enough, say so directly.
+- This skill is an orchestrator. Delegate each phase to the appropriate specialist skill instead of repeating that skill's full workflow here
+- Outputs from earlier phases become required inputs for later phases
+- Keep the workflow proportional to the change. If a single specialized skill is enough, say so directly
+- Consider using different models across phases if supported; prefer Claude for design, planning, and implementation, and GPT for clarification, verification, and review; always prefer the latest available models
 
 ## Core Principles
 
-- MUST clarify and confirm requirements before design, and confirm the chosen design before implementation.
-- MUST ground design and implementation in the existing codebase, patterns, constraints, and confirmed requirements.
-- MUST create a TDD-first implementation plan before coding begins.
-- MUST implement in small validated slices, using parallel implementation agents only for independent items that do not contend on the same unstable seam.
-- MUST review the code for quality, readability, and maintainability.
-- MUST keep the scope tight to the approved feature and carry forward confirmed assumptions, risks, and constraints across phases.
-- NEVER silently absorb unresolved decisions that materially affect design or implementation.
-- NEVER restate an entire delegated skill inline when a concise handoff to that skill is enough.
+- MUST confirm requirements specification, design, and implementation plan with the user before proceeding to the next phase
+- MUST document them and read or update them on demand for progress tracking, recovery, continuation, or restoration after context compression
+- MUST ground design and implementation in the existing codebase, patterns, constraints, and confirmed requirements
+- MUST create a TDD-first implementation plan before coding begins
+- MUST implement in small validated slices, using parallel implementation agents only for independent items that do not contend on the same unstable seam
+- MUST review the code for quality, readability, and maintainability
+- MUST keep the scope tight to the approved feature and carry forward confirmed assumptions, risks, and constraints across phases
+- NEVER silently absorb unresolved decisions that materially affect design or implementation
+- NEVER restate an entire delegated skill inline when a concise handoff to that skill is enough
 
 ## Workflow
 
 ### Phase 1: Clarify Requirements
 
-Use `/clarify` skill to clarify, validate, and refine the requirements until they are ready for design.
+Use the `/clarify` skill to clarify, validate, and refine requirements until they are ready for design, producing a clear and structured requirements specification.
 
 Before moving forward:
 
 - resolve or explicitly carry forward any open questions
-- confirm the refined requirements with the user
 - capture the affected files, patterns, tests, and constraints that later phases must respect
-- identify the build and runtime context, including the relevant scripts, commands, test execution steps, and test suites that subsequent phases should use for validation.
+- identify the build and runtime context, including the relevant scripts, commands, test execution steps, and test suites that subsequent phases should use for validation
+
+**MUST** confirm the refined requirements with the user
 
 ### Phase 2: Design the Solution
 
-Once the refined requirements are confirmed, use `/architect` skill to produce the implementation-ready design.
+Once the refined requirements are confirmed, use the `/architect` skill to produce the implementation-ready design.
 
 Launch three parallel design subagents with different focuses:
 
@@ -59,7 +62,7 @@ Launch three parallel design subagents with different focuses:
 - Clean Architecture: clean boundaries, maintainability, and stronger architecture
 - Pragmatic Balance: pragmatic balance between delivery speed, safety, and future flexibility
 
-Then compare the three approaches, evaluate the trade-offs, recommend one option, and confirm the chosen approach with the user before implementation.
+Then compare the three approaches, evaluate the trade-offs, recommend one option, and **MUST** confirm the chosen approach with the user.
 
 ### Phase 3: Plan the Implementation
 
@@ -67,11 +70,13 @@ After the design is approved, use the `/decompose` skill to transform the confir
 
 The plan should stay TDD-first and include the execution slices, dependencies, checkpoints, trackable to-do list, and task graph needed to drive implementation safely.
 
+**MUST** confirm the execution-ready implementation plan with the user before proceeding to implementation.
+
 ### Phase 4: Implement with TDD
 
 Execute the plan using a test-first approach via the `/tdd` skill, following its **failing-test-first** workflow for each implementation slice.
 
-When Phase 3 marks items as parallel, run multiple implementation subagents in parallel, one per independent item or small cluster within the same wave.
+When tasks or waves are marked as parallel in the plan, they may be executed concurrently using separate subagents; MUST attempt to run different tasks using multiple subagents, with a maximum of five.
 
 During implementation, you MUST:
 
@@ -95,9 +100,9 @@ Scope the review to:
 - the expected tests, lint checks, and validation steps
 - the desired behavior, success criteria, and edge cases
 
-Treat `Critical` and `Major` review findings as blocking.
+Treat Critical and Major review findings as blocking issues that must be resolved before considering the feature complete; address Minor issues if they can be fixed quickly.
 
-If review findings require changes, return to the TDD loop for the affected slice, re-run the relevant validation, and repeat review until the blocking findings are resolved.
+If review findings require changes, return to the TDD implementation loop for the affected slice, re-run the relevant validation, and repeat review until the blocking findings are resolved.
 
 Report out-of-scope issues only when confidence is high enough that they materially matter.
 
@@ -117,10 +122,10 @@ A structured final delivery summary that synthesizes the outputs of the delegate
 
 ## Error Handling
 
-- Stop before design when requirement-critical questions remain unresolved.
-- Present the lower-risk option and wait for approval when the design conflicts with the codebase or is over-engineered for the task.
-- Refine or rescope the plan before coding when `/decompose` cannot produce independently verifiable tasks.
-- Create the smallest safe test seam first, or get explicit approval, when `/tdd` cannot start cleanly.
-- Reslice the work or serialize that seam when parallel implementation slices begin to conflict.
-- Do not present the feature as complete while blocking `/review` findings remain unresolved, unless the user explicitly accepts them.
-- Split long-running delegated phases into subagents where appropriate, then recombine their outputs before continuing.
+- Stop before design when requirement-critical questions remain unresolved
+- Present the lower-risk option and wait for approval when the design conflicts with the codebase or is over-engineered for the task
+- Refine or rescope the plan before coding when `/decompose` cannot produce independently verifiable tasks
+- Create the smallest safe test seam first, or get explicit approval, when `/tdd` cannot start cleanly
+- Reslice the work or serialize that seam when parallel implementation slices begin to conflict
+- Do not present the feature as complete while blocking `/review` findings remain unresolved, unless the user explicitly accepts them
+- Split long-running delegated phases into subagents where appropriate, then recombine their outputs before continuing
