@@ -74,8 +74,10 @@ source .venv/bin/activate   # Windows: .venv\Scripts\activate
 - [/develop](skills/develop/SKILL.md): Orchestrate end-to-end feature delivery across clarification, design, planning, TDD implementation, review, and final handoff.
 - [/gitops](skills/gitops/SKILL.md): Execute common Git actions using consistent conventions for branching, committing, pushing, cleanup, and pull requests.
 - [/guide](skills/guide/SKILL.md): Provide a clear, beginner-friendly guide for a topic, focusing on what it is, how it works, key concepts, and how to get started.
+- [/index](skills/index/SKILL.md): Identify links from the user input, retrieve their content, generate concise summaries, and organize them into a structured index.
 - [/review](skills/review/SKILL.md): Review code changes for correctness, regressions, requirement coverage, test quality, design alignment, and delivery risk.
 - [/rewrite](skills/rewrite/SKILL.md): Rewrite user requests into clear, natural, and beginner-friendly English.
 - [/simplify](skills/simplify/SKILL.md): Simplify and refine existing code for clarity, consistency, and maintainability without changing behavior.
 - [/tdd](skills/tdd/SKILL.md): Use test-driven development when implementing a feature or bugfix, starting with a failing test before writing production code.
+- [/test](skills/test/SKILL.md): Add, fix, run, and report tests to ensure correctness and reliability of software components.
 - [/vocab](skills/vocab/SKILL.md): Explain vocabulary words with pronunciation, part of speech, beginner-friendly meanings, morphology, common phrases, and example sentences.
