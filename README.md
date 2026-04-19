@@ -78,4 +78,5 @@ source .venv/bin/activate   # Windows: .venv\Scripts\activate
 - [/rewrite](skills/rewrite/SKILL.md): Rewrite user requests into clear, natural, and beginner-friendly English.
 - [/simplify](skills/simplify/SKILL.md): Simplify and refine existing code for clarity, consistency, and maintainability without changing behavior.
 - [/tdd](skills/tdd/SKILL.md): Use test-driven development when implementing a feature or bugfix, starting with a failing test before writing production code.
+- [/test](skills/test/SKILL.md): Add, fix, run, and report tests to ensure correctness and reliability of software components.
 - [/vocab](skills/vocab/SKILL.md): Explain vocabulary words with pronunciation, part of speech, beginner-friendly meanings, morphology, common phrases, and example sentences.
