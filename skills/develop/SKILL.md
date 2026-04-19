@@ -13,7 +13,7 @@ metadata:
     - code-review
 ---
 
-# Develop Features
+# Develop
 
 ## Goal
 
@@ -24,7 +24,7 @@ Provide a structured approach to developing new features. Instead of jumping str
 - This skill is an orchestrator. Delegate each phase to the appropriate specialist skill instead of repeating that skill's full workflow here
 - Outputs from earlier phases become required inputs for later phases
 - Keep the workflow proportional to the change. If a single specialized skill is enough, say so directly
-- Consider using different models across phases if supported; prefer Claude for design, planning, and implementation, and GPT for clarification, verification, and review; always prefer the latest available models
+- Consider using different subagents across phases when supported, each bound to an appropriate model; prefer Claude for design, planning, and implementation, and GPT for clarification, verification, and review, always favoring the latest available models
 
 ## Core Principles
 

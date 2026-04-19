@@ -7,7 +7,7 @@ metadata:
   author: xbhel
 ---
 
-# Analyze Code
+# Analyze
 
 ## Goal
 
