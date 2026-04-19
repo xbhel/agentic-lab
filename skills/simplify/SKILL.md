@@ -7,7 +7,7 @@ metadata:
   author: xbhel
 ---
 
-# Simplify Code
+# Simplify
 
 ## Goal
 

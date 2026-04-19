@@ -9,7 +9,7 @@ metadata:
     - analyze
 ---
 
-# Clarify Requirements
+# Clarify
 
 ## Goal
 

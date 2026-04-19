@@ -7,7 +7,7 @@ metadata:
   author: xbhel
 ---
 
-# Review Code
+# Review
 
 ## Goal
 
@@ -95,8 +95,8 @@ See [review-checklist.md](./references/review-checklist.md) for a detailed check
 ### Step 7. Produce the Review
 
 - Report findings in severity order using this priority:
-  - `💥Critical`: bug, regression, security issue, data loss risk, or missing core requirement
-  - `⚠️Major`: meaningful test gap, design drift, reliability risk, or important maintainability issue
+  - `💥Critical`: bugs, regressions, security issues, risks of data loss or sensitive data exposure (e.g., secret keys, passwords), or missing core requirements
+  - `⚠️Major`: meaningful test gap, design drift, reliability risk, dead code, or important maintainability issue
   - `ℹ️Minor`: small readability, naming, unused, or consistency issue that does not materially affect correctness
 - Include the following for each finding:
   - the impact
