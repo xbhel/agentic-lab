@@ -33,13 +33,13 @@ Turn requirements into one concrete, implementation-ready architecture proposal 
 
 ## Workflow
 
-### 1. Validate Readiness
+### Step 1. Validate Readiness
 
 - Confirm requirements are sufficiently clear for architectural design.
 - Confirm the available context is enough to anchor the proposal.
 - List any missing information that would materially affect the design.
 
-### 2. Define Scope and Boundaries
+### Step 2. Define Scope and Boundaries
 
 - Define in-scope and out-of-scope work.
 - Identify affected components, modules, services, layers, workflows, and external systems.
@@ -47,7 +47,7 @@ Turn requirements into one concrete, implementation-ready architecture proposal 
 - Mark interfaces or contracts that may change and the cost of changing them.
 - Capture relevant runtime, deployment, performance, security, and ownership constraints.
 
-### 3. Design the Architecture
+### Step 3. Design the Architecture
 
 - Define the high-level architecture and major abstractions.
 - Select the design patterns that fit the context and explain why.
@@ -57,14 +57,14 @@ Turn requirements into one concrete, implementation-ready architecture proposal 
 - Trace the data flow and execution path from entry to completion.
 - Describe interaction and ownership handoffs where coordination matters.
 
-### 4. Stress the Design
+### Step 4. Stress the Design
 
 - Identify edge cases: invalid input, missing state, duplicates, ordering, retries, idempotency, concurrency, and partial failure.
 - Define error handling at each important boundary.
 - Identify operational, performance, maintainability, and migration risks.
 - Compare alternatives only when a meaningful design choice exists.
 
-### 5. Define Verification and Delivery
+### Step 5. Define Verification and Delivery
 
 1. Define validation steps and success criteria.
 2. Produce a workflow diagram that matches the written design.
