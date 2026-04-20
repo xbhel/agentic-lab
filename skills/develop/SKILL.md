@@ -75,7 +75,9 @@ The plan should stay TDD-first and include the execution slices, dependencies, c
 
 ### Phase 4: Implement with TDD
 
-Execute the plan using a test-first approach via the `/tdd` skill, following its **failing-test-first** workflow for each implementation slice, and strictly applying the test discipline principles defined in the `/test` skill.
+Execute the plan using a test-first approach via the `/tdd` skill, following its **failing-test-first** workflow for each implementation slice.
+
+Strictly apply the **Test Discipline** principles defined in the `/test` skill when designing and writing tests.
 
 When tasks or waves are marked as parallel in the plan, they may be executed concurrently using separate subagents; MUST attempt to run different tasks using multiple subagents, with a maximum of five.
 

@@ -1,15 +1,15 @@
 ---
-name: index
-description: Identify links (e.g., Markdown links or URLs) from the user input. For each link, retrieve its content and generate a concise summary, then produce a quick index. Use this when you need to digest reference links and organize them into a structured, readable index.
+name: digest
+description: Extract links (e.g., Markdown links or URLs) from the user input. For each link, retrieve its content and generate a concise summary, and organize the results into a readable digest index. Use this when you need to digest links and build an index for later lookup.
 argument-hint: links or mixed input containing links
 metadata: 
   version: 1.0.0
   author: xbhel
 ---
 
-# Index
+# Digest
 
-Identify links from the user input, retrieve their content, generate concise summaries, and organize them into a structured index following below format:
+Extract links from the user input, retrieve their content, generate concise summaries, and organize them into a structured index following below format:
 
 `[{from}/{author}/{type}/{title}]({url}): {summary} #{topic}`
 

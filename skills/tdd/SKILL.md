@@ -1,6 +1,6 @@
 ---
 name: tdd
-description: Use when implementing any feature or bugfix, before writing implementation code
+description: Use test-first development: write a failing test before implementation, then follow red–green–refactor. Use when implementing any feature or bugfix, before writing implementation code
 argument-hint: feature or bugfix to implement
 ---
 
