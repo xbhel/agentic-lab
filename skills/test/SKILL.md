@@ -21,8 +21,9 @@ Generate, run, and iteratively improve tests to ensure that software components 
 - **Focused scope:** keep each test focused on a specific behavior or requirement to ensure clarity and maintainability
 - **Smallest unit:** keep tests at the smallest meaningful unit of behavior, typically a single method or function. Assume collaborators are correct and already tested, and only stub dependencies that cross system boundaries or introduce side effects
 - **Readable tests:** keep tests small, focused, and intent-revealing; use clear names and add comments only when they clarify non-obvious setup or expectations
-- **Consistent naming:** use predictable, discoverable naming conventions for test files, classes, and methods, preferring BDD-style names where appropriate, and group them so the test suite is easy to navigate
-- **Clear structure:** organize source code, tests, fixtures, test data, and helpers in a consistent and navigable layout
+- **BDD-style test names:** Name test methods in a behavior-driven development style, describing the expected behavior under specific conditions, e.g., `method_should_return_error_when_input_is_invalid`
+- **Artifact naming:** Use predictable, discoverable naming conventions for test files and classes; organize them so the test suite is easy to navigate and maintain
+- **Clear structure:** keep source code, tests, fixtures, test data, and helpers in a consistent and navigable layout
 - **Reproducible environment:** ensure the test environment is fully reproducible, with testing, assertion, mocking, and coverage tools explicitly declared
 - **Single-command execution:** ensure all tests, individual test runs, and coverage reports can be executed via a single consistent command
 - **Clear assertions:** use precise assertions that produce meaningful failure messages and clearly express expected behavior; prefer fluent assertion styles when supported

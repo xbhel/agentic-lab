@@ -43,7 +43,7 @@ graph TD
 
 <!-- Groups of tasks that can be executed together in the same phase, marked with parallel when they can be run concurrently. -->
 
-- `<wave number>`(`<task ids>`): `<a clear description of the wave’s purpose and scope>` [ | parallel]  
+- `<wave number>`(`<task ids>`): `<a clear description of the wave’s purpose and scope>` [#parallel]  
 
 ## Checkpoints
 
@@ -53,6 +53,11 @@ graph TD
 
 ## Trackable TO-DO List
 
-<!-- A checklist of tasks and checkpoints for execution tracking -->
+<!-- Tracking only; this checklist does not define execution order. Tasks within the same wave execute concurrently. -->
 
-- [ ] `<task id>` or `<checkpoint id>`: `<action required to complete>`
+- `<wave number>` #parallel
+  - [ ] `<task id>`: `<action required to complete>`
+  - [ ] `<task id>`: `<action required to complete>`
+
+- Checkpoints
+  - [ ] `<checkpoint id>`: `<criteria to be met>`
