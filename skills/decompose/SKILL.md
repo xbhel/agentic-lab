@@ -35,7 +35,7 @@ Decompose work into small, independently executable and verifiable units, and pr
 
 ### Step 1. Clarify Work
 
-Clarify the work to be decomposed, including requirements, constraints, goals, and outcomes. If the work is insufficiently specified or ambiguous such that decomposition would be unreliable, must use `/clarify` skill first to resolve missing or unclear information before proceeding.
+Clarify the work to be decomposed, including requirements, constraints, goals, and outcomes. If the work is insufficiently specified or ambiguous such that decomposition would be unreliable, MUST use `/clarify` skill first to resolve missing or unclear information before proceeding.
 
 ### Step 2. Decompose into Tasks
 
