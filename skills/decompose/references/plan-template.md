@@ -2,14 +2,14 @@
 
 ## Overview
 
-<!-- high-level description of objectives, scope, and key considerations -->
+High-level description of objectives, scope, and key considerations.
 
 ## Task List
 
-<!-- All tasks with complete definitions, each task must use the following shape -->
+All tasks with complete definitions, each task must use the following shape:
 
-**`<id>`: `<label>`**
-
+```markdown
+### `<id>`: `<label>`
 - goal: `<goal>`
 - type: `<task type>`
 - inputs: `<input description>`
@@ -20,10 +20,11 @@
 - steps:
   1. `<action to be taken>`
 - depends-on: none | `<task ids>`
+```
 
 ## Task DAG
 
-<!-- Directed acyclic graph representing task dependencies and execution order -->
+Directed acyclic graph representing task dependencies and execution order:
 
 ```mermaid
 graph TD
@@ -41,23 +42,29 @@ graph TD
 
 ## Execution Waves
 
-<!-- Groups of tasks that can be executed together in the same phase, marked with parallel when they can be run concurrently. -->
+Groups of tasks that can be executed together in the same phase, marked with `#parallel` when they can be run concurrently:
 
-- `<wave number>`(`<task ids>`): `<a clear description of the wave’s purpose and scope>` [#parallel]  
+```markdown
+- `<wave number>`(`<task ids>`): `<a clear description of the wave’s purpose and scope>` [#parallel]
+```
 
 ## Checkpoints
 
-<!-- Plan-level checkpoints between task groups for progress tracking and safe execution transitions -->
+Plan-level checkpoints between waves for progress tracking and safe execution transitions:
 
-- `<checkpoint id>`: after `<task ids>`, `<criteria to be met>`
+```markdown
+- `<checkpoint id>`: after `<wave number>`, `<criteria to be met>`
+```
 
 ## Trackable TO-DO List
 
-<!-- Tracking only; this checklist does not define execution order. Tasks within the same wave execute concurrently. -->
+Tracking only; this checklist does not define execution order. Tasks within the same wave execute concurrently:
 
+```markdown
 - `<wave number>` #parallel
-  - [ ] `<task id>`: `<action required to complete>`
-  - [ ] `<task id>`: `<action required to complete>`
-
-- Checkpoints
-  - [ ] `<checkpoint id>`: `<criteria to be met>`
+  - [ ] `<task id1>`: `<action required to complete>`
+  - [ ] `<task id2>`: `<action required to complete>`
+- checkpoints after `<wave number>`
+  - [ ] `<checkpoint id1>`: `<criteria to be met>`
+  - [ ] `<checkpoint id2>`: `<criteria to be met>`
+```
