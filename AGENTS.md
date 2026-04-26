@@ -5,7 +5,7 @@
 When authoring a skill, organize the content in the following order:
 
 1. Metadata: Defined at the top of the file.
-2. Goal: Clear statement of the skill’s purpose and expected outcome.
+2. Goal: Clear statement of the skill's purpose and expected outcome.
 3. Inputs (optional): Table of input parameters following the defined Input Schema below.
 4. Context (optional): Background, conventions, or assumptions that inform execution.
 5. Core Principles (optional): Constraints and rules that must be followed.
@@ -30,4 +30,4 @@ Users typically invoke an **agent** or **skill** by name. If input parameters ar
 
 - NEVER ask for info that can be inferred or fetched via tools.
 - NEVER assume completeness—check for missing inputs and request them explicitly.
-- MUST call the `/rewrite` skill on every new user message before any other work begins, and output it, then use the rewritten request as the source of truth for the current turn only.
+- MUST call the `/polish` skill on every new user message before any other work begins, and output it, then use the rewritten request as the source of truth for the current turn only.

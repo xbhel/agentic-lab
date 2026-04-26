@@ -82,7 +82,7 @@ Use the following checklist to ensure all important aspects of the architecture 
 - **Data Flow:** End-to-end execution path, including validation, orchestration, side effects, async processing, retries, and decision points
 - **Interaction:** Key coordination flows, interaction sequences, and ownership handoffs
 - **Edge Cases and Error Handling:** Invalid input, missing state, duplication, concurrency, ordering, backward compatibility, and boundary-specific failures
-- **Risks and Trade-offs:** Technical risks, complexity, migration concerns, and design trade-offs
+- **Risks and Trade-offs:** Technical risks, complexity, migration concerns, open questions, and design trade-offs
 - **Validation Approach:** How to confirm the architecture is correct, complete, and safe to implement
 - **Diagram:** Provide a Mermaid diagram that accurately reflects the proposed architecture, using clear labels, flow markers, and colors to distinguish components where helpful
 
