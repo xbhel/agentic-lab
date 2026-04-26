@@ -30,7 +30,7 @@ Provide a structured approach to developing new features. Instead of jumping str
 ## Core Principles
 
 - MUST confirm requirements specification, design, and implementation plan with the user before proceeding to the next phase
-- MUST document them and read or update them on demand for progress tracking, recovery, continuation, or restoration after context compression
+- MUST document these artifacts and read or update them on demand for progress tracking, recovery, continuation, or restoration after context compression
 - MUST ground design and implementation in the existing codebase, patterns, constraints, and confirmed requirements
 - MUST create a TDD-first implementation plan before coding begins
 - MUST implement in small validated slices, using parallel implementation agents only for independent items that do not contend on the same unstable seam
@@ -38,6 +38,7 @@ Provide a structured approach to developing new features. Instead of jumping str
 - MUST keep the scope tight to the approved feature and carry forward confirmed assumptions, risks, and constraints across phases
 - NEVER silently absorb unresolved decisions that materially affect design or implementation
 - NEVER restate an entire delegated skill inline when a concise handoff to that skill is enough
+- NEVER mark the development as complete until all tests pass and lint checks pass
 
 ## Workflow
 
@@ -109,7 +110,21 @@ If review findings require changes, return to the TDD implementation loop for th
 
 Report out-of-scope issues only when confidence is high enough that they materially matter.
 
-After the review loop is complete, produce the final delivery summary using the output structure below.
+### Phase 6: Final Delivery Summary
+
+After the review loop is complete, ask the user whether to document the specification and design as a guide in the codebase. If yes, create the documentation following these guidelines:
+
+- Use clear naming and organization for easy access and future reference
+- Prefer a single file with separate sections unless clarity requires splitting into multiple files
+- Keep the content concise and beginner-friendly
+- Use clear, simple language and avoid unnecessary jargon
+- Maintain a warm and encouraging tone throughout, never cold and clinical
+- Use emojis sparingly to improve readability and visual clarity, without overusing them
+- Add colored Mermaid diagrams or other visual aids when they help explain complex concepts more clearly
+- Use numbered steps or sequence markers in diagrams to make flows easier to understand
+- Avoid Markdown-sensitive syntax in Mermaid diagrams; use plain text labels such as `1: run task` instead of `1. run task`
+
+Always produce the final delivery summary using the output structure below.
 
 ## Output
 

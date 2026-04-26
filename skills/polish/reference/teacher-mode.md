@@ -18,25 +18,25 @@ Please help me write a clearer request for fixing the login bug.
 - Use `for fixing the login bug` instead of `for fix login bug`.
 - Use the base action `fix the login bug` for a direct task, or `investigate the login bug` when the request is about understanding the cause rather than reporting a past action.
 
-📚Key vocabulary:
+📚 Key vocabulary:
 - `clearer request`
 - `fix the login bug`
 
 ⏳ Tense usage:
-- “help me write” is present simple, used for polite requests.
-- The task “fix the login bug” is expressed as an infinitive/action goal, not a past event.
-- If describing an issue that already happened, use past tense (e.g., “the login bug occurred”).
+- "help me write" is present simple, used for polite requests.
+- The task "fix the login bug" is expressed as an infinitive/action goal, not a past event.
+- If describing an issue that already happened, use past tense (e.g., "the login bug occurred").
 
 ✨More natural expressions:
 - Help me phrase a clearer request about fixing the login bug.
 - Help me rewrite my request so it clearly asks for a fix to the login bug.
 
 <!-- Step 2: Practice -->
-🧪Practice:
+🧪 Practice:
 - Rewrite this sentence using `help me rewrite` and `clearly`.
 
 <!-- Step 3: Clarification -->
-🎯Next step:
+🎯 Next step:
 - Which meaning do you want?
 - Option A: Ask someone to fix the login bug.
 - Option B: Ask someone to investigate and explain the cause of the login bug.
