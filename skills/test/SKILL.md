@@ -58,6 +58,8 @@ Identify the components, modules, functions, or features to be tested, along wit
 
 Identify and prepare the testing environment required to execute the tests, including the programming language, testing framework, libraries, tools, commands, and configuration settings. Ensure all dependencies, mocks, stubs, and external systems can be controlled, simulated, or isolated to support a reproducible and deterministic test environment.
 
+**IMPORTANT:** Avoid superficial code scanning and environment assumptions. You MUST deeply understand the codebase before modifying it, and verify all commands, tools, configurations, and the actual runtime environment (e.g., the specific SDK or runtime version in use) to ensure tests run correctly.
+
 ### Step 3. Review Existing Tests
 
 Review existing tests to ensure they are correct, up to date, and meaningful. Identify untested behaviors, branches, and edge cases, and avoid duplicating existing coverage. Rewrite tests only when they are stale, brittle, duplicated, or assert incorrect behavior.

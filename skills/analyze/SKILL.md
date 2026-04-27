@@ -13,6 +13,12 @@ metadata:
 
 Produce a structured, evidence-based analysis of a target codebase area, including how it works, how it interacts with surrounding code, and what constraints, extension points, gaps, or risks are relevant, with sufficient detail to support design, implementation, debugging, refactoring, estimation, and review.
 
+## IRON RULE
+
+Don't just scan files and code; you MUST analyze and understand them to the point of knowing how to safely modify and extend them. You MUST also know the specific commands needed to run and verify them. 
+
+Especially when multiple possible environments exist (such as when users have different JDK installations), you MUST know which version is actually used in the current project to run and verify correctly.
+
 ## Core Principles
 
 - **Evidence first:** Every finding should point to concrete evidence (file, symbol, test, or command)
