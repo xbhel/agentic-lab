@@ -2,11 +2,11 @@
 
 ## Overview
 
-High-level description of objectives, scope, and key considerations.
+{High-level description of objectives, scope, and key considerations}
 
 ## Task List
 
-All tasks with complete definitions, each task must use the following shape:
+<!-- All tasks with complete definitions, each task must use the following shape -->
 
 ```markdown
 ### `<id>`: `<label>`
@@ -24,7 +24,7 @@ All tasks with complete definitions, each task must use the following shape:
 
 ## Task DAG
 
-Directed acyclic graph representing task dependencies and execution order:
+<!-- Directed acyclic graph representing task dependencies and execution order -->
 
 ```mermaid
 graph TD
@@ -42,7 +42,7 @@ graph TD
 
 ## Execution Waves
 
-Groups of tasks that can be executed within the same phase. MUST be marked with `#parallel` when multiple tasks can run concurrently:
+<!-- Groups of tasks that can be executed within the same phase. MUST be marked with `#parallel` when multiple tasks can run concurrently -->
 
 ```markdown
 - `<wave number>`(`<task ids>`): `<a clear description of the wave’s purpose and scope>` [#parallel]
@@ -50,7 +50,7 @@ Groups of tasks that can be executed within the same phase. MUST be marked with 
 
 ## Checkpoints
 
-Plan-level checkpoints between waves for progress tracking and safe execution transitions:
+<!-- Plan-level checkpoints between waves for progress tracking and safe execution transitions -->
 
 ```markdown
 - `<checkpoint id>`: after `<wave number>`, `<criteria to be met>`
@@ -58,7 +58,7 @@ Plan-level checkpoints between waves for progress tracking and safe execution tr
 
 ## Trackable TO-DO List
 
-Tracking only; this checklist does not define execution order. Tasks within the same wave execute concurrently:
+<!-- Tracking only; this checklist does not define execution order. Tasks within the same wave execute concurrently -->
 
 ```markdown
 - `<wave number>` #parallel
