@@ -80,7 +80,7 @@ Execute the plan using a test-first approach via the `/tdd` skill, following its
 
 Strictly apply the **Test Discipline** principles defined in the `/test` skill when designing and writing tests(e.g. AAA Design, First-class tests, and BDD-style test names).
 
-When waves are marked as parallel in the plan, they may be executed concurrently using separate subagents; MUST attempt to run different tasks in the same wave using multiple subagents, with a maximum of five.
+When a wave is marked as parallel, all tasks within that wave are eligible for concurrent execution. You **MUST execute them in parallel using multiple subagents** where applicable, launching up to 3 subagents at most per wave.
 
 During implementation, you MUST:
 

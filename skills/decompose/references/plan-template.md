@@ -42,7 +42,7 @@ graph TD
 
 ## Execution Waves
 
-groups of tasks that can be executed within the same phase. MUST be marked with `#parallel` when multiple tasks can run concurrently:
+Groups of tasks that can be executed within the same phase. MUST be marked with `#parallel` when multiple tasks can run concurrently:
 
 ```markdown
 - `<wave number>`(`<task ids>`): `<a clear description of the wave’s purpose and scope>` [#parallel]
