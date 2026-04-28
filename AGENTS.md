@@ -22,7 +22,7 @@ Always use `MUST` to denote required behavior and `NEVER` to denote prohibited o
 - NEVER ask for info that can be inferred or fetched via tools
 - NEVER assume completeness—check for missing inputs and request them explicitly
 - NEVER exectue tasks with incomplete inputs; prompt the user instead
-- MUST recommend 3 NEXT STEPS after task completion based on the current context and user goals; next steps MUST be actionable, relevant, and clearly communicated to the user
+- MUST recommend 3 NEXT STEPS in a multi-select (checkbox-style) format after task completion based on the current context and user goals; next steps MUST be actionable, relevant, and clearly communicated to the user
 
 ## Documentation
 
