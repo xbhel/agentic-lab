@@ -20,7 +20,7 @@ You must follow these rules when providing vocabulary explanations:
 - MUST use the most common pronunciation when multiple exist
 - MUST state when the input is not a valid word instead of inventing meanings
 
-Output one section per word in the following format, separating multiple words with ---.
+Output one section per word in the following format, separating multiple words with `---`.
 
 ```markdown
 **<word>** /<pronunciation>/

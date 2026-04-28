@@ -18,16 +18,13 @@ Always use `MUST` to denote required behavior and `NEVER` to denote prohibited o
 
 ## User Interaction
 
-Users typically invoke an **agent** or **skill** by name. If input parameters are required:
+- MUST call the `/polish` skill on every new user message before any other work begins, and output it, then use the polished request as the source of truth for the current turn only
+- NEVER ask for info that can be inferred or fetched via tools
+- NEVER assume completeness—check for missing inputs and request them explicitly
+- NEVER exectue tasks with incomplete inputs; prompt the user instead
+- MUST recommend NEXT STEPS after task completion based on the current context and user goals; next steps MUST be actionable, relevant, and clearly communicated to the user
 
-- Collect values through an appropriate interface (e.g., form, command line, API request).
-- Prefer using `ask_questions` to gather or confirm input values unless another interface is better suited for the context.
-- Present both:
-  - **Missing values** that require user input.
-  - **Inferred or pre-collected values**, allowing the user to review and confirm them before execution.
+## Documentation
 
-## Core Principles
-
-- NEVER ask for info that can be inferred or fetched via tools.
-- NEVER assume completeness—check for missing inputs and request them explicitly.
-- MUST call the `/polish` skill on every new user message before any other work begins, and output it, then use the rewritten request as the source of truth for the current turn only.
+- MUST use English for all documentation
+- BEFORE opening a PR, MUST update *README.md* with a skills index and keep it in sync with any skill changes.
