@@ -17,12 +17,12 @@ Transform raw, incomplete, or ambiguous requirements into a clear, evidence-base
 
 ## Core Principles
 
-- Must ask clarifying questions until the requirements are unambiguous
-- Always batch clarifying questions into a single prompt; never ask one at a time
-- Must use codebase evidence to resolve ambiguities before escalating to the user
-- Must produce a requirements specification, not an architecture proposal
-- Must surface assumptions and risks explicitly; do not absorb them silently
-- Never implement or design; focus on clarifying and refining requirements only
+- MUST ask clarifying questions until the requirements are unambiguous
+- ALWAYS batch clarifying questions into a single prompt; never ask one at a time
+- MUST use codebase evidence to resolve ambiguities before escalating to the user
+- MUST produce a requirements specification, not an architecture proposal
+- MUST surface assumptions and risks explicitly; do not absorb them silently
+- NEVER implement or design; focus on clarifying and refining requirements only
 
 ## Workflow
 
