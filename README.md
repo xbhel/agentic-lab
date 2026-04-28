@@ -72,6 +72,7 @@ source .venv/bin/activate   # Windows: .venv\Scripts\activate
 - [/clarify](skills/clarify/SKILL.md): Analyze the user's requirements, resolve ambiguities, and align intent with existing codebase context when necessary, then produce a structured specification for downstream design and implementation.
 - [/decompose](skills/decompose/SKILL.md): Break work into small, independently executable and verifiable tasks, then produce an execution-ready DAG plan with explicit dependencies, sequencing, and parallelism.
 - [/develop](skills/develop/SKILL.md): Orchestrate end-to-end feature delivery across clarification, design, planning, TDD implementation, review, and final handoff.
+- [/document](skills/document/SKILL.md): Produce clear, structured, and maintainable engineering documentation for a given topic or context.
 - [/gitops](skills/gitops/SKILL.md): Execute common Git actions using consistent conventions for branching, committing, pushing, cleanup, and pull requests.
 - [/guide](skills/guide/SKILL.md): Provide a clear, beginner-friendly guide for a topic, focusing on what it is, how it works, key concepts, and how to get started.
 - [/digest](skills/digest/SKILL.md): Extract links from the user input, retrieve their content, generate concise summaries, and organize them into a structured index.

@@ -27,4 +27,4 @@ Always use `MUST` to denote required behavior and `NEVER` to denote prohibited o
 ## Documentation
 
 - MUST use English for all documentation
-- MUST, before committing changes, ensure the *[README.md](./README.md)* Skills index is updated and synchronized with any changes in the *[skills](./skills)* directory
+- MUST, before committing changes, ensure the *[README.md](./README.md)* Skills section is updated and synchronized with any changes in the *[skills](./skills)* directory
