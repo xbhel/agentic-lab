@@ -37,3 +37,4 @@ ONLY READ the most relevant reference to create/update documentation:
 - [guide.md](./references/guide.md): Provide step-by-step instructions and usage guidance
 - [quickstart.md](./references/quickstart.md): Provide a minimal setup and getting-started flow
 - [best-practices.md](./references/best-practices.md): Summarize recommended patterns and approaches
+- [readme.md](./references/readme.md): Provide project overview, setup, usage examples, and contribution guidelines
