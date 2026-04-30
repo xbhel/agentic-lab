@@ -1,21 +1,34 @@
 # Xbhel's Agent Workspace
 
-> From zero to agentic: custom AI agents, skill libraries, and MCP workflows in one workspace. 🚀
+> A skill-first workspace for Coding Agents, with shared agent conventions, reusable prompt skills, and local setup helpers. 🚀
 
-## Structure
+## 🧭 Overview
 
-| Directory      | Purpose                                            |
-| -------------- | -------------------------------------------------- |
-| `agents/`      | Agent definitions that orchestrate multiple skills |
-| `skills/`      | Skill definitions and implementations              |
-| `mcp_servers/` | MCP server implementations                         |
-| `scripts/`     | Utility scripts for testing and maintenance        |
+This repository is the source of truth for a personal AI skill library. It keeps skill definitions, supporting references, and workspace instructions in one place so the same workflows can be reused across tools.
 
-## Setup
+## ✨ What It Provides
+
+- A shared skill library under `skills/`
+- Workspace conventions in `AGENTS.md`, `CLAUDE.md`, and `copilot-instructions.md`
+- A helper script for linking skills into local tool directories
+- A Python environment for running helper scripts when needed
+
+## 🗂️ Structure
+
+| Path | Purpose |
+| --- | --- |
+| `skills/` | Skill definitions, references, and helper scripts |
+| `scripts/` | Utility scripts such as `load-skills.ps1` |
+| `AGENTS.md` | Shared authoring and workflow rules |
+| `CLAUDE.md` | Claude-facing instruction entry point |
+| `copilot-instructions.md` | Copilot-facing instruction entry point                |
+| `pyproject.toml`          | Python environment and tool configuration             |
+
+## ⚙️ Setup
 
 ### Load the workspace in Copilot
 
-Point `~/.copilot` at this repo so Copilot picks it up automatically.
+Point `~/.copilot` at this repo so Copilot can load the workspace instructions and local skills.
 
 **Linux/macOS**
 
@@ -27,14 +40,14 @@ ln -s /path/to/agentic-lab ~/.copilot
 
 ```powershell
 # Requires Developer Mode or Admin. Use Junction if SymbolicLink is unavailable.
-New-Item -ItemType SymbolicLink -Path "$HOME\.copilot" -Target "\path\to\agentic-lab"
+New-Item -ItemType SymbolicLink -Path "$HOME\.copilot" -Target "C:\path\to\agentic-lab"
 # or
-New-Item -ItemType Junction -Path "$HOME\.copilot" -Target "\path\to\agentic-lab"
+New-Item -ItemType Junction -Path "$HOME\.copilot" -Target "C:\path\to\agentic-lab"
 ```
 
 ### Load skills in Codex
 
-Codex looks for skills at `~/.codex/skills/<skill-name>/SKILL.md`. It does not scan nested folders, so link each directory under `skills/` into `~/.codex/skills`.
+Codex looks for skills at `~/.codex/skills/<skill-name>/SKILL.md`. It does not scan nested folders, so each skill directory must be linked into `~/.codex/skills`.
 
 **Linux/macOS**
 
@@ -48,10 +61,13 @@ done
 **Windows (PowerShell)**
 
 ```powershell
-$source = "\path\to\agentic-lab\skills"
-Get-ChildItem -LiteralPath $source -Directory | ForEach-Object {
-  New-Item -ItemType Junction -Path "$HOME\.codex\skills\$($_.Name)" -Target $_.FullName
-}
+.\scripts\load-skills.ps1 -DestinationRoot codex
+```
+
+You can also sync skills for both Codex and Copilot with one command:
+
+```powershell
+.\scripts\load-skills.ps1 -DestinationRoot codex,copilot
 ```
 
 > Restart Codex after adding or updating skills.
@@ -65,20 +81,48 @@ uv sync
 source .venv/bin/activate   # Windows: .venv\Scripts\activate
 ```
 
-## Skills
+## 💬 Usage
 
-- [/analyze](skills/analyze/SKILL.md): Analyze an existing codebase, or a specific area within a codebase, to build a clear, evidence-based understanding of how it works, how its parts interact, and how it can be changed or extended safely.
-- [/architect](skills/architect/SKILL.md): Design a clear, extensible, and maintainable architecture proposal with explicit boundaries, responsibilities, integration points, and scalability considerations.
-- [/clarify](skills/clarify/SKILL.md): Analyze the user's requirements, resolve ambiguities, and align intent with existing codebase context when necessary, then produce a structured specification for downstream design and implementation.
-- [/decompose](skills/decompose/SKILL.md): Break work into small, independently executable and verifiable tasks, then produce an execution-ready DAG plan with explicit dependencies, sequencing, and parallelism.
-- [/develop](skills/develop/SKILL.md): Orchestrate end-to-end feature delivery across clarification, design, planning, TDD implementation, review, and final handoff.
-- [/document](skills/document/SKILL.md): Produce clear, structured, and maintainable engineering documentation for a given topic or context.
-- [/gitops](skills/gitops/SKILL.md): Execute common Git actions using consistent conventions for branching, committing, pushing, cleanup, and pull requests.
-- [/guide](skills/guide/SKILL.md): Provide a clear, beginner-friendly guide for a topic, focusing on what it is, how it works, key concepts, and how to get started.
-- [/digest](skills/digest/SKILL.md): Extract links from the user input, retrieve their content, generate concise summaries, and organize them into a structured index.
-- [/review](skills/review/SKILL.md): Review code changes for correctness, regressions, requirement coverage, test quality, design alignment, and delivery risk.
-- [/polish](skills/polish/SKILL.md): Refine and rewrite user requests into clear, natural, and beginner-friendly English.
-- [/simplify](skills/simplify/SKILL.md): Simplify and refine existing code for clarity, consistency, and maintainability without changing behavior.
-- [/tdd](skills/tdd/SKILL.md): Use test-driven development when implementing a feature or bugfix, starting with a failing test before writing production code.
-- [/test](skills/test/SKILL.md): Add, fix, run, and report tests to ensure correctness and reliability of software components.
-- [/vocab](skills/vocab/SKILL.md): Explain vocabulary words with pronunciation, part of speech, beginner-friendly meanings, morphology, common phrases, and example sentences.
+After the workspace or skills are linked, invoke a skill directly in chat with its slash command. Examples:
+
+- `/clarify` for requirement clarification
+- `/document` for engineering documentation
+- `/review` for code review
+
+Each skill lives in `skills/<skill-name>/SKILL.md`, and many skills also include supporting reference files in a local `references/` directory.
+
+## Development Workflow
+
+1. Edit the relevant skill in `skills/<skill-name>/SKILL.md`.
+2. Update any supporting references or scripts in the same skill directory.
+3. Keep the skills list in this README synchronized with the actual `skills/` directory.
+4. Re-run `./scripts/load-skills.ps1 -DestinationRoot codex,copilot` on Windows if you need to refresh linked skills locally.
+
+## 🧩 Skills
+
+- [/analyze](skills/analyze/SKILL.md): Build an evidence-based understanding of a codebase or feature area before changing it.
+- [/architect](skills/architect/SKILL.md): Design a clear, maintainable architecture proposal with explicit boundaries and trade-offs.
+- [/clarify](skills/clarify/SKILL.md): Turn incomplete or ambiguous requirements into a structured, codebase-aware specification.
+- [/decompose](skills/decompose/SKILL.md): Break work into small tasks and produce a dependency-aware execution plan.
+- [/develop](skills/develop/SKILL.md): Orchestrate end-to-end feature delivery from clarification through implementation and handoff.
+- [/digest](skills/digest/SKILL.md): Summarize links and organize the results into a readable index.
+- [/document](skills/document/SKILL.md): Create structured engineering documentation such as drafts, specs, designs, ADRs, guides, quickstarts, and READMEs.
+- [/gitops](skills/gitops/SKILL.md): Perform common Git workflows with shared conventions for branching, syncing, and pull requests.
+- [/polish](skills/polish/SKILL.md): Rewrite user requests into clear, natural, beginner-friendly English.
+- [/review](skills/review/SKILL.md): Review code changes for bugs, regressions, coverage gaps, and design risk.
+- [/simplify](skills/simplify/SKILL.md): Improve code clarity and maintainability without changing behavior.
+- [/tdd](skills/tdd/SKILL.md): Drive implementation with a failing test first, then follow red-green-refactor.
+- [/test](skills/test/SKILL.md): Add, fix, run, and report tests to improve confidence in code behavior.
+- [/vocab](skills/vocab/SKILL.md): Explain English vocabulary with pronunciation, meanings, phrases, and examples for learners.
+
+## 📚 Related Documentation
+
+- [AGENTS.md](AGENTS.md): shared rules for skill authoring and workflow behavior
+- [CLAUDE.md](CLAUDE.md): Claude-facing instruction entry point
+- [copilot-instructions.md](copilot-instructions.md): Copilot-facing instruction entry point
+
+## 🤝 Contribution Notes
+
+- Follow the structure and conventions defined in `AGENTS.md` when editing or adding skills.
+- Keep documentation in English.
+- Keep the `README.md` skills list synchronized with the contents of `skills/`.
