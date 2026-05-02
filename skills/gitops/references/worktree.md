@@ -1,36 +1,37 @@
 # Worktree
 
-Create and manage multiple working trees attached to the same repository, enabling parallel work on different branches or commits without cloning the repository
+Create and manage additional working trees for the same repository so work can continue on multiple branches or commits without cloning.
 
 ## Commands
 
-- Create: `git worktree add <path> <branch|commit>`
+- Create from existing branch: `git worktree add <path> <branch>`
+- Create new branch from base: `git worktree add -b <new_branch> <path> <base>`
 - List: `git worktree list`
+- Check status: `git -C <path> status --short`
 - Remove: `git worktree remove <path>`
-- Prune: `git worktree prune` (removes references to deleted worktrees)
-- Enter worktree: `cd <path>`
-- Status: `git -C <path> status`
+- Prune stale metadata: `git worktree prune`
   
 ## Iron Laws
 
-- MUST ensure each worktree path is unique and does not overlap with others or the main repo
-- MUST remove unused worktrees to avoid clutter and confusion
-- MUST run git worktree prune regularly to clean stale references
-- MUST ensure all changes are committed or safely saved before removing a worktree
+- MUST ensure the requested path is unique and does not overlap with the main repo or other worktrees
+- MUST request a different branch or path if the target branch is already checked out in another worktree
+- MUST fail early if the target branch, base branch, or commit does not exist
+- MUST ensure all changes are committed, stashed, or safely preserved before removing a worktree
 - MUST commit and push only from within the corresponding worktree directory
 
 ## Workflow
 
-1. Resolve the target branch or commit and the desired worktree path from the request
-2. Create the worktree: `git worktree add <path> <branch|commit>`
-3. Enter the worktree: `cd <path>`
-4. Perform work — make changes, commit, and push from within the worktree
-5. Return to the main repo when done: `cd <repo_root>`
-6. Remove the worktree: `git worktree remove <path>`
-7. Prune stale references: `git worktree prune`
+1. Resolve the target path and whether to use an existing branch or create a new branch from a base
+   - If a new branch is needed, use [create-branch](./create-branch.md) to create it.
+2. Use `.wt/<branch>` as the standard worktree path format
+3. Run `git worktree list` to inspect current worktrees and avoid path or branch conflicts
+4. Create the worktree using the appropriate command from the Commands section
+5. Enter the worktree directory and  run `git status` to verify it is correctly set up
+6. Set up the worktree for development (e.g., install dependencies, configure environment) before starting work
+7. When cleanup is requested, remove the worktree and run `git worktree prune`
 
 ## Output
 
-- Worktree path created
+- Worktree path and branch created
 - Active worktrees (`git worktree list`)
 - Worktrees removed, if any
