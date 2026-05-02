@@ -1,6 +1,6 @@
 ---
 name: gitops
-description: Execute common Git actions using consistent conventions. Use this when the request involves standard Git operations such as creating branches, synchronizing, committing or pushing changes, applying or pushing cherry-picks, cleaning up branches, opening pull requests, or managing worktrees.
+description: Execute common Git actions using consistent conventions. Use this when the request involves standard Git operations such as creating branches, synchronizing, committing or pushing changes, applying or pushing cherry-picks, cleaning up branches, opening pull requests, managing worktrees, or rebasing branches.
 argument-hint: git action to perform
 metadata:
   version: 1.0.0
@@ -11,7 +11,7 @@ metadata:
 
 ## Goal
 
-Execute common Git actions using consistent conventions for branch creation, commits, pushes, cherry-picking, branch cleanup, pull request creation, and worktree management.
+Execute common Git actions using consistent conventions for branch creation, commits, pushes, cherry-picking, branch cleanup, pull request creation, worktree management, and rebasing.
 
 ## Action References
 
@@ -23,6 +23,7 @@ See the below reference when it match the user's request:
 - [cleanup-branches.md](./references/cleanup-branches.md): Deletes specified branches both locally and remotely to clean up stale branches
 - [open-pull-request.md](./references/open-pull-request.md): Opens a pull request from the current branch to a target branch with a descriptive title and body
 - [worktree.md](./references/worktree.md): Creates and manages multiple working trees to enable parallel work on different branches without cloning
+- [rebase.md](./references/rebase.md): Rebases the current branch onto a target branch to incorporate latest changes and maintain a linear history
 
 ## Commands
 
