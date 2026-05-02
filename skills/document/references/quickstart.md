@@ -8,13 +8,14 @@ Before writing a quickstart, you MUST know:
 - the shortest safe happy path
 - the exact signal that confirms the flow worked
 
-## Core Principles
+## Iron Laws
 
 - MUST optimize for the shortest safe path to first success
 - MUST include only the steps required for that first useful result
 - MUST make the success signal obvious so readers know when they are done
 - NEVER turn the quickstart into a full tutorial
 - NEVER hide required prerequisites or assumptions that would block success
+- MUST use web search to find up-to-date and relevant docs, examples, and tutorials to inform quickstart content
 
 ## Quickstart Structure
 

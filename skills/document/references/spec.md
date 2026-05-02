@@ -8,7 +8,7 @@ Before writing a spec, you MUST know:
 - the main stakeholders or consumers of the behavior
 - the key constraints that may shape the requirements
 
-## Core Principles
+## Iron Laws
 
 - MUST describe what the system must do, not how the code should be written
 - MUST write requirements in a way that can be reviewed, tested, or otherwise verified

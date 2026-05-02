@@ -8,7 +8,7 @@ Before writing a design, you MUST know:
 - the systems, interfaces, or components involved
 - the main technical constraints and review concerns
 
-## Core Principles
+## Iron Laws
 
 - MUST explain the structure of the solution before diving into lower-level detail
 - MUST make component ownership, boundaries, and interfaces easy to trace
