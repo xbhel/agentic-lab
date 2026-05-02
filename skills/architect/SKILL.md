@@ -13,7 +13,7 @@ metadata:
 
 Turn requirements into one concrete, implementation-ready architecture proposal grounded in the available context, with clear structure, ownership boundaries, integration points, and validation considerations.
 
-## Core Principles
+## Iron Laws
 
 - Must understand requirements and relevant context deeply before designing.
 - Must ground every design decision in requirements, constraints, or available context evidence.

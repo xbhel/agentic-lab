@@ -111,6 +111,7 @@ Each skill lives in `skills/<skill-name>/SKILL.md`, and many skills also include
 - [/polish](skills/polish/SKILL.md): Rewrite user requests into clear, natural, beginner-friendly English.
 - [/review](skills/review/SKILL.md): Review code changes for bugs, regressions, coverage gaps, and design risk.
 - [/simplify](skills/simplify/SKILL.md): Improve code clarity and maintainability without changing behavior.
+- [/summarize](skills/summarize/SKILL.md): Synthesize information from various sources into a concise and coherent summary that captures the essential points, insights, or decisions.
 - [/tdd](skills/tdd/SKILL.md): Drive implementation with a failing test first, then follow red-green-refactor.
 - [/test](skills/test/SKILL.md): Add, fix, run, and report tests to improve confidence in code behavior.
 - [/vocab](skills/vocab/SKILL.md): Explain English vocabulary with pronunciation, meanings, phrases, and examples for learners.

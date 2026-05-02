@@ -15,7 +15,7 @@ metadata:
 
 Decompose work into small, independently executable and verifiable units, and produce an execution-ready plan structured as a task DAG with explicit dependencies, sequencing, and parallelism to enable efficient concurrent execution.
 
-## Core Principles
+## Iron Laws
 
 - MUST perform thorough analysis before drafting a task DAG execution plan
 - MUST keep each task small enough to be implemented and verified independently
