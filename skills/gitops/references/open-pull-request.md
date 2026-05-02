@@ -15,9 +15,9 @@ Fields are derived from the source branch name, user request, or `git log --onel
 
 ## PR Body Template
 
-Check the repository for available PR templates (e.g., `.github/pull_request_template.md`); if multiple exist, prompt the user to select one.
+MUST first check the repository for PR templates (e.g., `.github/pull_request_template.md`); if multiple exist, prompt the user to select one.
 
-If none exist, use the default template at [assets/pull-request-template.md](../assets/pull-request-template.md).
+Only if no repository-level template exists at all, use the default template at [assets/pull-request-template.md](../assets/pull-request-template.md).
 
 ## MCP Servers
 
