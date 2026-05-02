@@ -6,7 +6,7 @@ Cherry-pick selected commits from a source branch onto a new working branch crea
 - Cherry-pick control: `git cherry-pick --abort | --continue | --skip`
 - Filter commits: `git log --oneline origin/<target> [--grep="<keyword>"] [--author="<name>"] [--after="<date>"] [--before="<date>"]`
 
-## Core Principles
+## Iron Laws
 
 - MUST stop and ask the user to resolve conflicts manually if a conflict cannot be confidently resolved
 

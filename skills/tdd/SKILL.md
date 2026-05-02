@@ -1,6 +1,7 @@
 ---
 name: tdd
 description: Use test-first development: write a failing test before implementation, then follow red–green–refactor. Use when implementing any feature or bugfix, before writing implementation code
+context: fork
 argument-hint: feature or bugfix to implement
 ---
 

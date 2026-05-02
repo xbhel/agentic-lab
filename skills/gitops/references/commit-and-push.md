@@ -2,6 +2,8 @@
 
 Commit the intended local changes from a working branch, rebase onto the selected base branch, and push the result safely.
 
+- MUST use `git diff` to read and analyze changes instead of reading modified files directly
+
 ## Commit Message Format
 
 **Subject:** `<type>(<scope>)#<workitem>: <short_description>`
@@ -30,7 +32,7 @@ Switch authentication from session-based to JWT for improved security and scalab
 Workitem: #1234567
 ```
 
-## Core Principles
+## Iron Laws
 
 - NEVER commit or push directly to protected branches: `dev`, `main`, `master`, `<base>`
 - MUST strictly follow the commit message format above for consistency and traceability
