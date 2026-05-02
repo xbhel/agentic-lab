@@ -1,4 +1,4 @@
-# Xbhel's Agent Workspace
+# Xbhel's Skills
 
 > A skill-first workspace for Coding Agents, with shared agent conventions, reusable prompt skills, and local setup helpers. 🚀
 
