@@ -2,6 +2,8 @@
 
 Open a pull request from a source branch to a target branch, using a repository template when available and adding reviewers or assignees when needed.
 
+- MUST use `git diff` to read and analyze changes instead of reading modified files directly
+
 ## PR Title Format
 
 `<type>(<scope>)#<workitem>: <short_description>`
@@ -64,7 +66,7 @@ uv run --with httpx==0.28.1 python "<skill_dir>/scripts/pull_request.py" \
     --cwd "<repo_root>"
 ```
 
-## Core Principles
+## Iron Laws
 
 - MUST strictly follow the PR title and body format for consistency and traceability.
 - MUST use repository templates when available to ensure PRs include required information and follow standards.

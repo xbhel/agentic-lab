@@ -2,6 +2,7 @@
 name: test
 description: Add, fix, run, and report tests to ensure correctness and reliability of software components. User can control iterative execution via max_iterations (number of iterations) and coverage_target (minimum coverage threshold). Use this when you need to add new tests, fix existing tests, or verify and improve code correctness through tests.
 argument-hint: what needs to be tested, how many iterations to run, and the minimum coverage required
+context: fork
 metadata:
   version: 1.0.0
   author: xbhel
@@ -13,7 +14,9 @@ metadata:
 
 Generate, run, and iteratively improve tests to ensure that software components function correctly and reliably according to their specifications.
 
-## Test Discipline
+## Test Disciplines
+
+When adding or fixing tests, follow these principles to ensure tests are effective, maintainable, and valuable:
 
 - **First-class tests:** treat tests as production code, with the same care, review standards, and maintenance discipline
 - **AAA Design:** follow the Arrange–Act–Assert pattern to ensure each test has a clear setup, execution, and verification phase
@@ -40,7 +43,7 @@ Generate, run, and iteratively improve tests to ensure that software components 
 - **Refactoring feedback loop:** use test friction and failures as signals to improve production code design, modularity, and testability
 - **Defect reporting:** when tests reveal bugs, document minimal reproduction, expected vs actual behavior, impact, and relevant test evidence
 
-## Core Principles
+## Iron Laws
 
 - MUST document untestable code explaining why it is hard to test, suggesting minimal design improvements, and providing an alternative test strategy
 - MUST document source defects by describing the bug, how to reproduce it, proposing a fix, and adding a regression test to prevent recurrence
@@ -59,6 +62,38 @@ Identify the components, modules, functions, or features to be tested, along wit
 Identify and prepare the testing environment required to execute the tests, including the programming language, testing framework, libraries, tools, commands, and configuration settings. Ensure all dependencies, mocks, stubs, and external systems can be controlled, simulated, or isolated to support a reproducible and deterministic test environment.
 
 **IMPORTANT:** Avoid superficial code scanning and environment assumptions. You MUST deeply understand the codebase before modifying it, and verify all commands, tools, configurations, and the actual runtime environment (e.g., the specific SDK or runtime version in use) to ensure tests run correctly.
+
+Example:
+
+```text
+Project: Java monorepo
+
+Environment discovery:
+- Programming language: Java
+- Build tool: Maven
+- Testing framework: JUnit 5
+- Mocking library: Mockito
+- Linting tool: SonarLint
+- Coverage tool: JaCoCo
+
+Detected environment:
+- Multiple JDK versions installed locally: JDK 8, JDK 11, and JDK 17
+- Different modules in the monorepo may target different Java versions
+
+Configuration verification:
+- Inspect root and module pom.xml files
+- Confirm current target module declares Java 11
+- Verify test dependencies, plugins, and Maven profiles
+
+Required commands:
+- export JAVA_HOME=/path/to/jdk11
+- export PATH=$JAVA_HOME/bin:$PATH
+- mvn test -pl target-module
+
+Reason:
+- System default JDK may not match project requirements
+- Tests must run against the runtime, dependencies, commands, and configuration actually declared by the target project, not local machine defaults
+```
 
 ### Step 3. Review Existing Tests
 

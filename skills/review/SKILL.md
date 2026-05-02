@@ -15,7 +15,7 @@ Produce an evidence-based review of a change, prioritizing correctness, regressi
 
 See [review-checklist.md](./references/review-checklist.md) for a detailed checklist and template for performing comprehensive code reviews when needed.
 
-## Core Principles
+## Iron Laws
 
 - MUST ask for the minimal missing locator (e.g., PR number, diff, or file set) if the review target cannot be identified.
 - MUST review the actual diff when available and read surrounding code as needed to verify behavior

@@ -14,7 +14,7 @@ metadata:
 
 Create documentation with clear structure, actionable content, and appropriate depth, aligned with user intent and engineering context.
 
-## IRON RULES
+## Iron Laws
 
 - MUST use the `/clarify` skill when the user's intent, scope, or purpose is ambiguous or incomplete
 - MUST use the `/analyze` skill to gather relevant context before writing, especially for code or technical topics

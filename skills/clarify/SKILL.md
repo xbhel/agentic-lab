@@ -15,7 +15,7 @@ metadata:
 
 Transform raw, incomplete, or ambiguous requirements into a clear, evidence-based, codebase-informed specification that is ready for design and implementation.
 
-## Core Principles
+## Iron Laws
 
 - MUST ask clarifying questions until the requirements are unambiguous
 - ALWAYS batch clarifying questions into a single prompt; never ask one at a time

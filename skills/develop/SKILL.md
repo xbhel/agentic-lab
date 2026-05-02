@@ -27,7 +27,7 @@ Provide a structured approach to developing new features. Instead of jumping str
 - Keep the workflow proportional to the change. If a single specialized skill is enough, say so directly
 - Consider using different subagents across phases when supported, each bound to an appropriate model; prefer Claude for design, planning, and implementation, and GPT for clarification, verification, and review, always favoring the latest available models
 
-## Core Principles
+## Iron Laws
 
 - MUST confirm requirements specification, design, and implementation plan with the user before proceeding to the next phase
 - MUST document these artifacts and read or update them on demand for progress tracking, recovery, continuation, or restoration after context compression
@@ -68,9 +68,7 @@ Then compare the three approaches, evaluate the trade-offs, recommend one option
 
 ### Phase 3: Plan the Implementation
 
-After the design is approved, use the `/decompose` skill to transform the confirmed scope into a structured execution plan—comprising decomposed, sequenced, and parallelizable tasks with explicit dependencies, defined checkpoints, and a trackable to-do list. This serves as the execution-ready plan.
-
-The plan should stay TDD-first and include the execution slices, dependencies, checkpoints, trackable to-do list, and task graph needed to drive implementation safely.
+After the design is approved, use the `/decompose` skill to transform the confirmed scope into into a TDD-first execution plan—comprising decomposed, sequenced, and parallelizable tasks with explicit dependencies, defined checkpoints, and a trackable to-do list. This serves as the execution-ready plan.
 
 **MUST** confirm the execution-ready implementation plan with the user before proceeding to implementation.
 
@@ -78,9 +76,14 @@ The plan should stay TDD-first and include the execution slices, dependencies, c
 
 Execute the plan using a test-first approach via the `/tdd` skill, following its **failing-test-first** workflow for each implementation slice.
 
-Strictly apply the **Test Discipline** principles defined in the `/test` skill when designing and writing tests(e.g. AAA Design, First-class tests, and BDD-style test names).
+Strictly use the `/test` skill for:
+- test environment discovery and setup
+- test execution and verification
+- test design guidance and quality standards
 
-When a wave is marked as parallel, all tasks within that wave are eligible for concurrent execution. You **MUST execute them in parallel using multiple subagents** where applicable, launching up to 3 subagents at most per wave.
+When writing tests during TDD, strictly apply the Test Disciplines defined in the `/test` skill (e.g., AAA Design, First-class tests, and BDD-style test naming conventions).
+
+When a execution wave is marked as parallel, all tasks within that wave are eligible for concurrent execution. You **MUST execute them in parallel using multiple subagents** where applicable, launching up to 3 subagents at most per wave.
 
 During implementation, you MUST:
 
@@ -110,33 +113,21 @@ If review findings require changes, return to the TDD implementation loop for th
 
 Report out-of-scope issues only when confidence is high enough that they materially matter.
 
-### Phase 6: Final Delivery Summary
+### Phase 6: Final Delivery
 
-After the review loop is complete, ask the user whether to document the specification and design as a guide in the codebase. If yes, create the documentation following these guidelines:
+After the review loop is complete, MUST create or update the relevant documents (e.g., spec, design, guide, ADR) using the `/document` skill. Then produce a final delivery summary that synthesizes outputs from delegated skills using the structure below.
 
-- Use clear naming and organization for easy access and future reference
-- Prefer a single file with separate sections unless clarity requires splitting into multiple files
-- Keep the content concise and beginner-friendly
-- Use clear, simple language and avoid unnecessary jargon
-- Maintain a warm and encouraging tone throughout, never cold and clinical
-- Use emojis sparingly to improve readability and visual clarity, without overusing them
-- Add colored Mermaid diagrams or other visual aids when they help explain complex concepts more clearly
-- Use numbered steps or sequence markers in diagrams to make flows easier to understand
-- Avoid Markdown-sensitive syntax in Mermaid diagrams; use plain text labels such as `1: run task` instead of `1. run task`
-
-Always produce the final delivery summary using the output structure below.
+**IMPORTANT:** Guide and ADR documents MUST be maintained as separate files. For other documents, prefer a single file with separate sections unless clarity requires splitting into multiple files. A document SHOULD be split once it exceeds 500 lines, or earlier if navigation, review, or maintainability suffers.
 
 ## Output
 
-A structured final delivery summary that synthesizes the outputs of the delegated skills and includes:
-
-- current status of the feature
+- docs created or updated
+- current feature status
 - refined requirements baseline
 - approved design summary
 - implementation outcome and changed surfaces
-- validation results, including tests, lint, and review verdict
-- remaining risks, follow-up items, or open decisions
-- documentation and usage notes relevant to users or maintainers
+- validation results, including tests, lint, and review verdicts
+- remaining risks, follow-up items, and open decisions
 
 ## Error Handling
 

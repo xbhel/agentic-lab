@@ -58,9 +58,9 @@ graph TD
 
 ## Trackable TO-DO List
 
-<!-- Tracking only; this checklist does not define execution order. Tasks within the same wave execute concurrently -->
-
 ```markdown
+**IMPORTANT:** Tracking only; this checklist does not define execution order. Tasks within the same wave execute concurrently
+ 
 - `<wave number>` #parallel
   - [ ] `<task id1>`: `<action required to complete>`
   - [ ] `<task id2>`: `<action required to complete>`

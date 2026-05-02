@@ -8,7 +8,7 @@ Before writing a draft, you MUST know:
 - the audience that needs alignment
 - the constraints or prior context that readers will need
 
-## Core Principles
+## Iron Laws
 
 - MUST keep the draft exploratory without pretending the answer is already final
 - MUST make the problem, candidate directions, and open questions easy to review quickly
