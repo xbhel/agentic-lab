@@ -2,8 +2,6 @@
 
 Commit the intended local changes from a working branch, rebase onto the selected base branch, and push the result safely.
 
-- MUST use `git diff` to read and analyze changes instead of reading modified files directly
-
 ## Commit Message Format
 
 **Subject:** `<type>(<scope>)#<workitem>: <short_description>`
