@@ -1,6 +1,6 @@
 ---
 name: gitops
-description: Execute common Git actions using consistent conventions. Use this when the request involves standard Git operations such as creating branches, synchronizing, committing or pushing changes, applying or pushing cherry-picks, cleaning up branches, or opening pull requests.
+description: Execute common Git actions using consistent conventions. Use this when the request involves standard Git operations such as creating branches, synchronizing, committing or pushing changes, applying or pushing cherry-picks, cleaning up branches, opening pull requests, or managing worktrees.
 argument-hint: git action to perform
 metadata:
   version: 1.0.0
@@ -11,7 +11,7 @@ metadata:
 
 ## Goal
 
-Execute common Git actions using consistent conventions for branch creation, commits, pushes, cherry-picking, branch cleanup, and pull request creation.
+Execute common Git actions using consistent conventions for branch creation, commits, pushes, cherry-picking, branch cleanup, pull request creation, and worktree management.
 
 ## Action References
 
@@ -22,6 +22,7 @@ See the below reference when it match the user's request:
 - [cherry-pick-and-push.md](./references/cherry-pick-and-push.md): Cherry-picks selected commits onto a new branch created from the target branch and pushes it
 - [cleanup-branches.md](./references/cleanup-branches.md): Deletes specified branches both locally and remotely to clean up stale branches
 - [open-pull-request.md](./references/open-pull-request.md): Opens a pull request from the current branch to a target branch with a descriptive title and body
+- [worktree.md](./references/worktree.md): Creates and manages multiple working trees to enable parallel work on different branches without cloning
 
 ## Commands
 
@@ -51,14 +52,15 @@ Use the following commands to perform Git operations:
 
 - MUST read and follow the selected reference before executing any action
 - Prefer using the provided reference commands and conventions for consistency across operations
-- MUST execute multiple actions in the required order when the request spans more than one.
-- MUST combine consecutive independent commands using `&&` into a single execution to reduce round-trips.
-- MUST report failed actions with the command that failed and the error message for reference.
+- MUST execute multiple actions in the required order when the request spans more than one
+- MUST combine consecutive independent commands using `&&` into a single execution to reduce round-trips
+- MUST report failed actions with the command that failed and the error message for reference
+- MUST use `git diff` to read and analyze changes instead of reading modified files directly
 
 ## Workflow
 
-1. Identify the required action from the request.
-2. Select the corresponding reference from the Action References above.
-3. Read the reference and resolve required inputs.
-4. Execute the action following the reference.
-5. If multiple actions are requested, repeat the process in order.
+1. Identify the required action from the request
+2. Select the corresponding reference from the Action References above
+3. Read the reference and resolve required inputs
+4. Execute the action following the reference
+5. If multiple actions are requested, repeat the process in order
