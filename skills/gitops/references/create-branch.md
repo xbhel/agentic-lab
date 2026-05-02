@@ -24,7 +24,7 @@ Create a new working branch from the correct base branch using the shared branch
 
 Example: `feat/1234578_add-user-auth`
 
-## Core Principles
+## Iron Laws
 
 - MUST stop and ask whether to reuse the branch or create a different name if the branch already exists.
 - MUST stop and report the failure if `base` cannot be fetched or does not exist on origin.

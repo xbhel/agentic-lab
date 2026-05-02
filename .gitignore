@@ -50,3 +50,7 @@ pids/
 *.pid
 *.seed
 *.pid.lock
+
+# Agent runtime state
+session-state/
+vscode.session.*

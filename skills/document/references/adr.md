@@ -8,7 +8,7 @@ Before writing an ADR, you MUST know:
 - the realistic alternatives that were considered
 - the consequences or follow-up work the decision creates
 
-## Core Principles
+## Iron Laws
 
 - MUST keep each ADR focused on one primary decision
 - MUST explain both the chosen option and the reasoning behind it

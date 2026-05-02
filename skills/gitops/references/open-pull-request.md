@@ -64,7 +64,7 @@ uv run --with httpx==0.28.1 python "<skill_dir>/scripts/pull_request.py" \
     --cwd "<repo_root>"
 ```
 
-## Core Principles
+## Iron Laws
 
 - MUST strictly follow the PR title and body format for consistency and traceability.
 - MUST use repository templates when available to ensure PRs include required information and follow standards.

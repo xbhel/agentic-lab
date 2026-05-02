@@ -8,13 +8,14 @@ Before writing best practices, you MUST know:
 - the recurring mistakes or review friction points
 - the trade-offs that make some advice situational rather than absolute
 
-## Core Principles
+## Iron Laws
 
 - MUST provide clear defaults that help readers make repeated decisions consistently
 - MUST explain why recommended patterns are useful and why anti-patterns are risky
 - MUST keep the guidance reusable instead of tied to only one case
 - NEVER present preferences as rigid rules without context
 - NEVER list too many rules for readers to apply in practice
+- MUST use web search to find up-to-date and relevant docs, examples, and tutorials to inform best-practices content
 
 ## Best Practices Structure
 

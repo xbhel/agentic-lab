@@ -5,7 +5,7 @@ Remove local branches and optionally remote branches that are no longer needed, 
 - Protected branches: `dev`, `main`, `master`
 - Remote deletion: `git push origin --delete <branch>`
 
-## Core Principles
+## Iron Laws
 
 - MUST re-confirm with the user before deleting any protected branch
 - MUST report any failed local or remote deletions and retain them for manual review

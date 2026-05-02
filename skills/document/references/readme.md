@@ -8,7 +8,7 @@ Before writing a README, you MUST know:
 - the most common setup and usage paths
 - which deeper documents should be linked instead of duplicated
 
-## Core Principles
+## Iron Laws
 
 - MUST help a new reader understand quickly what this thing is and how to start using it
 - MUST keep the README focused on orientation, setup, and common usage

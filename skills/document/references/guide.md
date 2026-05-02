@@ -8,7 +8,7 @@ Before writing a guide, you MUST know:
 - the user's likely starting level
 - the minimum context needed to avoid confusion or unsafe usage
 
-## Core Principles
+## Iron Laws
 
 - MUST ensure understanding and action support each other throughout the guide
 - MUST balance explanation, actionable steps, and examples in every guide
@@ -17,6 +17,7 @@ Before writing a guide, you MUST know:
 - NEVER assume background knowledge beyond what has been explicitly introduced
 - NEVER list steps without explaining why they matter or when to use them
 - ALWAYS include common pitfalls, limitations, and safety notes relevant to beginners
+- MUST use web search to find up-to-date and relevant docs, examples, and tutorials to inform guide content
 
 ## Guide Structure
 

@@ -30,7 +30,7 @@ Switch authentication from session-based to JWT for improved security and scalab
 Workitem: #1234567
 ```
 
-## Core Principles
+## Iron Laws
 
 - NEVER commit or push directly to protected branches: `dev`, `main`, `master`, `<base>`
 - MUST strictly follow the commit message format above for consistency and traceability
