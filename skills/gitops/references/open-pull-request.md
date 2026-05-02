@@ -2,6 +2,8 @@
 
 Open a pull request from a source branch to a target branch, using a repository template when available and adding reviewers or assignees when needed.
 
+- MUST use `git diff` to read and analyze changes instead of reading modified files directly
+
 ## PR Title Format
 
 `<type>(<scope>)#<workitem>: <short_description>`
