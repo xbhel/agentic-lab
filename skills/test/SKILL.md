@@ -2,7 +2,6 @@
 name: test
 description: Add, fix, run, and report tests to ensure correctness and reliability of software components. User can control iterative execution via max_iterations (number of iterations) and coverage_target (minimum coverage threshold). Use this when you need to add new tests, fix existing tests, or verify and improve code correctness through tests.
 argument-hint: what needs to be tested, how many iterations to run, and the minimum coverage required
-context: fork
 metadata:
   version: 1.0.0
   author: xbhel
