@@ -42,7 +42,7 @@ When adding or fixing tests, follow these principles to ensure tests are effecti
 - **Refactoring feedback loop:** use test friction and failures as signals to improve production code design, modularity, and testability
 - **Defect reporting:** when tests reveal bugs, document minimal reproduction, expected vs actual behavior, impact, and relevant test evidence
 
-## Iron Laws
+## The IRON LAWS
 
 - MUST document untestable code explaining why it is hard to test, suggesting minimal design improvements, and providing an alternative test strategy
 - MUST document source defects by describing the bug, how to reproduce it, proposing a fix, and adding a regression test to prevent recurrence

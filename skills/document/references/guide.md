@@ -8,7 +8,7 @@ Before writing a guide, you MUST know:
 - the user's likely starting level
 - the minimum context needed to avoid confusion or unsafe usage
 
-## Iron Laws
+## The IRON LAWS
 
 - MUST ensure understanding and action support each other throughout the guide
 - MUST balance explanation, actionable steps, and examples in every guide

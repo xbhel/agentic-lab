@@ -1,6 +1,6 @@
 # Agents Guidelines
 
-## Iron Laws
+## The IRON LAWS
 
 ### Skill Authoring
 

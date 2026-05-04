@@ -8,7 +8,7 @@ Before writing best practices, you MUST know:
 - the recurring mistakes or review friction points
 - the trade-offs that make some advice situational rather than absolute
 
-## Iron Laws
+## The IRON LAWS
 
 - MUST provide clear defaults that help readers make repeated decisions consistently
 - MUST explain why recommended patterns are useful and why anti-patterns are risky

@@ -13,7 +13,7 @@ metadata:
 
 Produce a structured, evidence-based analysis of a target codebase area, including how it works, how it interacts with surrounding code, and what constraints, extension points, gaps, or risks are relevant, with sufficient detail to support design, implementation, debugging, refactoring, estimation, and review.
 
-## Iron Laws
+## The IRON LAWS
 
 DON'T JUST SCAN FIELS AND CODE; you MUST analyze and understand them to the point of knowing how to safely modify and extend them. You MUST also know the specific commands needed to run and verify them. 
 

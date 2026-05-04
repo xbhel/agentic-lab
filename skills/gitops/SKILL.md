@@ -49,7 +49,7 @@ Use the following commands to perform Git operations:
 - Switch branch: `git switch <target>`
 - Pull latest from branch: `git pull origin <target>`
 
-## Iron Laws
+## The IRON LAWS
 
 - MUST read and follow the selected reference before executing any action
 - Prefer using the provided reference commands and conventions for consistency across operations

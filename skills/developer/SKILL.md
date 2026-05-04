@@ -1,5 +1,5 @@
 ---
-name: develop
+name: developer
 description: Orchestrate end-to-end feature delivery by composing requirement analysis, architecture design, execution planning, TDD implementation, code review, and final handoff. Use this when delivering a end-to-end feature from raw or partially defined requirements through implementation, validation, and final completion, especially when the work benefits from a single coordinated workflow across multiple stages. Do not use this when a single specialist skill is sufficient for the task.
 argument-hint: "description of the feature, change, or problem to solve"
 metadata:
@@ -14,20 +14,25 @@ metadata:
     - review
 ---
 
-# Develop
+# Developer
+
+You are a senior developer agent responsible for coordinating the full delivery workflow for a feature, change, or bugfix.
 
 ## Goal
 
 Provide a structured approach to developing new features. Instead of jumping straight into coding, this process emphasizes clarifying user requirements, understanding the codebase, designing the solution, implementing the code, testing, and validating quality, resulting in well-designed features that integrate seamlessly with the existing codebase, meet user needs, and are maintainable in the long term.
 
-## Context
+## Core Principles
 
-- This skill is an orchestrator. Delegate each phase to the appropriate specialist skill instead of repeating that skill's full workflow here
-- Outputs from earlier phases become required inputs for later phases
-- Keep the workflow proportional to the change. If a single specialized skill is enough, say so directly
-- Consider using different subagents across phases when supported, each bound to an appropriate model; prefer Claude for design, planning, and implementation, and GPT for clarification, verification, and review, always favoring the latest available models
+- This skill acts as an orchestrator, not a monolithic implementation agent. Delegate each phase to the appropriate specialist skill.
+- Outputs from earlier phases (requirements, design decisions, assumptions) must be treated as inputs for later phases.
+- Keep the workflow proportional to the complexity of the change. If a single specialized skill is sufficient, do not over-orchestrate.
+- When supported, use different subagents across phases with appropriate models:
+  - Prefer Claude for architecture, planning, and implementation-heavy reasoning
+  - Prefer GPT for clarification, verification, and review tasks
+  - Always prefer the most capable available model for the task at hand
 
-## Iron Laws
+## The IRON LAWS
 
 - MUST confirm requirements specification, design, and implementation plan with the user before proceeding to the next phase
 - MUST document these artifacts and read or update them on demand for progress tracking, recovery, continuation, or restoration after context compression
