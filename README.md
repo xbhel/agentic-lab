@@ -2,18 +2,18 @@
 
 > A skill-first workspace for Coding Agents, with shared agent conventions, reusable prompt skills, and local setup helpers. 🚀
 
-## 🧭 Overview
+## Overview
 
 This repository is the source of truth for a personal AI skill library. It keeps skill definitions, supporting references, and workspace instructions in one place so the same workflows can be reused across tools.
 
-## ✨ What It Provides
+## What It Provides
 
 - A shared skill library under `skills/`
 - Workspace conventions in `AGENTS.md`, `CLAUDE.md`, and `copilot-instructions.md`
 - A helper script for linking skills into local tool directories
 - A Python environment for running helper scripts when needed
 
-## 🗂️ Structure
+## Structure
 
 | Path | Purpose |
 | --- | --- |
@@ -24,7 +24,7 @@ This repository is the source of truth for a personal AI skill library. It keeps
 | `copilot-instructions.md` | Copilot-facing instruction entry point                |
 | `pyproject.toml`          | Python environment and tool configuration             |
 
-## ⚙️ Setup
+## Setup
 
 ### Load the workspace in Copilot
 
@@ -81,7 +81,7 @@ uv sync
 source .venv/bin/activate   # Windows: .venv\Scripts\activate
 ```
 
-## 💬 Usage
+## Usage
 
 After the workspace or skills are linked, invoke a skill directly in chat with its slash command. Examples:
 
@@ -98,13 +98,13 @@ Each skill lives in `skills/<skill-name>/SKILL.md`, and many skills also include
 3. Keep the skills list in this README synchronized with the actual `skills/` directory.
 4. Re-run `./scripts/load-skills.ps1 -DestinationRoot codex,copilot` on Windows if you need to refresh linked skills locally.
 
-## 🧩 Skills
+## Skills
 
 - [/analyze](skills/analyze/SKILL.md): Build an evidence-based understanding of a codebase or feature area before changing it.
 - [/architect](skills/architect/SKILL.md): Design a clear, maintainable architecture proposal with explicit boundaries and trade-offs.
 - [/clarify](skills/clarify/SKILL.md): Turn incomplete or ambiguous requirements into a structured, codebase-aware specification.
 - [/decompose](skills/decompose/SKILL.md): Break work into small tasks and produce a dependency-aware execution plan.
-- [/develop](skills/develop/SKILL.md): Orchestrate end-to-end feature delivery from clarification through implementation and handoff.
+- [/developer](skills/developer/SKILL.md): Orchestrate end-to-end feature delivery from clarification through implementation and handoff.
 - [/digest](skills/digest/SKILL.md): Summarize links and organize the results into a readable index.
 - [/document](skills/document/SKILL.md): Create structured engineering documentation such as drafts, specs, designs, ADRs, guides, quickstarts, and READMEs.
 - [/gitops](skills/gitops/SKILL.md): Perform common Git workflows with shared conventions for branching, syncing, and pull requests.
@@ -116,13 +116,13 @@ Each skill lives in `skills/<skill-name>/SKILL.md`, and many skills also include
 - [/test](skills/test/SKILL.md): Add, fix, run, and report tests to improve confidence in code behavior.
 - [/vocab](skills/vocab/SKILL.md): Explain English vocabulary with pronunciation, meanings, phrases, and examples for learners.
 
-## 📚 Related Documentation
+## Related Documentation
 
 - [AGENTS.md](AGENTS.md): shared rules for skill authoring and workflow behavior
 - [CLAUDE.md](CLAUDE.md): Claude-facing instruction entry point
 - [copilot-instructions.md](copilot-instructions.md): Copilot-facing instruction entry point
 
-## 🤝 Contribution Notes
+## Contribution Notes
 
 - Follow the structure and conventions defined in `AGENTS.md` when editing or adding skills.
 - Keep documentation in English.

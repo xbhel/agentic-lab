@@ -8,7 +8,7 @@ Before writing a quickstart, you MUST know:
 - the shortest safe happy path
 - the exact signal that confirms the flow worked
 
-## Iron Laws
+## The IRON LAWS
 
 - MUST optimize for the shortest safe path to first success
 - MUST include only the steps required for that first useful result

@@ -6,7 +6,7 @@ Rebase the current branch onto a target branch to incorporate the latest changes
 - Interactive rebase: `git rebase -i origin/<target>`
 - Rebase control: `git rebase --abort | --continue | --skip`
 
-## Iron Laws
+## The IRON LAWS
 
 - NEVER rebase directly on protected branches: `dev`, `main`, `master`
 - MUST stop and report the exact failing step, preserving the branch state for manual recovery

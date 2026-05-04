@@ -11,7 +11,7 @@ Create and manage additional working trees for the same repository so work can c
 - Remove: `git worktree remove <path>`
 - Prune stale metadata: `git worktree prune`
   
-## Iron Laws
+## The IRON LAWS
 
 - MUST ensure the requested path is unique and does not overlap with the main repo or other worktrees
 - MUST request a different branch or path if the target branch is already checked out in another worktree

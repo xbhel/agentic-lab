@@ -35,7 +35,7 @@ Only if no repository-level template exists at all, use the default template at 
 
 **IMPORTANT:** ALWAYS run CLI with `--help` first to see available options. For example, `gh pr create --help` or `az repos pr create --help`.
 
-## Iron Laws
+## The IRON LAWS
 
 - MUST strictly follow the PR title and body format for consistency and traceability
 - MUST use repository templates when available to ensure PRs include required information and follow standards
