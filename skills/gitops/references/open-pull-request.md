@@ -10,7 +10,7 @@ Fields are derived from the source branch name, user request, or `git log --onel
 
 - type: `feat` | `fix` | `chore` | `docs` | `style` | `refactor` | `perf` | `test` | `build` | `ci` | `revert` | `release`
 - scope: Optional, area of the codebase affected (e.g., auth, ui, api, config)
-- workitem: The work item or issue number
+- workitem: Required work item ID. Inferred from the branch name (e.g., feat/1234567_xxx → 1234567);
 - short_description: Concise summary from commits or user input
 
 ## PR Body Template
@@ -52,5 +52,7 @@ Only if no repository-level template exists at all, use the default template at 
 
 ## Output
 
-- PR URL, title, and target branch
+- PR URL
+- Title
+- Target branch
 - Reviewers and assignees successfully added

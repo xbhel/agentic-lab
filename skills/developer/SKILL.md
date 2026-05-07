@@ -6,12 +6,12 @@ metadata:
   version: 1.1.1
   author: xbhel
   depends-on:
-    - clarify
-    - architect
-    - decompose
-    - tdd
-    - test
-    - review
+    - /clarify
+    - /architect
+    - /decompose
+    - /tdd
+    - /test
+    - /review
 ---
 
 # Developer
@@ -24,9 +24,9 @@ Provide a structured approach to developing new features. Instead of jumping str
 
 ## Core Principles
 
-- This skill acts as an orchestrator, not a monolithic implementation agent. Delegate each phase to the appropriate specialist skill.
-- Outputs from earlier phases (requirements, design decisions, assumptions) must be treated as inputs for later phases.
-- Keep the workflow proportional to the complexity of the change. If a single specialized skill is sufficient, do not over-orchestrate.
+- This skill acts as an orchestrator, not a monolithic implementation agent. Delegate each phase to the appropriate specialist skill
+- Outputs from earlier phases (requirements, design decisions, assumptions) must be treated as inputs for later phases
+- Keep the workflow proportional to the change. If a single specialized skill is enough, say so directly
 - When supported, use different subagents across phases with appropriate models:
   - Prefer Claude for architecture, planning, and implementation-heavy reasoning
   - Prefer GPT for clarification, verification, and review tasks
@@ -120,7 +120,7 @@ Report out-of-scope issues only when confidence is high enough that they materia
 
 ### Phase 6: Final Delivery
 
-After the review loop is complete, MUST create or update the relevant documents (e.g., spec, design, guide, ADR) using the `/document` skill. Then produce a final delivery summary that synthesizes outputs from delegated skills using the structure below.
+After the review loop is complete, MUST create and update the relevant documents (e.g., spec, design, guide, ADR) using the `/document` skill. Then produce a final delivery summary that synthesizes outputs from delegated skills using the structure below.
 
 **IMPORTANT:** Guide and ADR documents MUST be maintained as separate files. For other documents, prefer a single file with separate sections unless clarity requires splitting into multiple files. A document SHOULD be split once it exceeds 500 lines, or earlier if navigation, review, or maintainability suffers.
 
@@ -138,8 +138,8 @@ After the review loop is complete, MUST create or update the relevant documents 
 
 - Stop before design when requirement-critical questions remain unresolved
 - Present the lower-risk option and wait for approval when the design conflicts with the codebase or is over-engineered for the task
-- Refine or rescope the plan before coding when `/decompose` cannot produce independently verifiable tasks
-- Create the smallest safe test seam first, or get explicit approval, when `/tdd` cannot start cleanly
+- Refine or rescope the plan before coding when `/decompose` skill cannot produce independently verifiable tasks
+- Create the smallest safe test seam first, or get explicit approval, when `/tdd` skill cannot start cleanly
 - Reslice the work or serialize that seam when parallel implementation slices begin to conflict
-- Do not present the feature as complete while blocking `/review` findings remain unresolved, unless the user explicitly accepts them
+- Do not present the feature as complete while blocking `/review` skill findings remain unresolved, unless the user explicitly accepts them
 - Split long-running delegated phases into subagents where appropriate, then recombine their outputs before continuing
