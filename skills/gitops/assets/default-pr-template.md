@@ -3,8 +3,7 @@
 ## Summary
 
 - **Type:** `<type>`
-- **Work Item:** `[prefix]#<workitem>`
-<!-- Use prefix `AB` for Azure Boards work items, e.g. AB#12345 -->
+- **Work Item:** `<workitem>`
 
 {Briefly describe what changed and why}
 
