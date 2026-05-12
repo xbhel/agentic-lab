@@ -54,3 +54,4 @@ pids/
 # Agent runtime state
 session-state/
 vscode.session.*
+.agents/
