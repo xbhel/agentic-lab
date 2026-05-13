@@ -38,6 +38,7 @@ Only if no repository-level template exists at all, use the default template at 
 ## The IRON LAWS
 
 - MUST strictly follow the PR title and body format for consistency and traceability
+- MUST ensure PR body is valid Markdown with actual newlines, not escaped newline strings like `\r\n` or `\r\n`
 - MUST use repository templates when available to ensure PRs include required information and follow standards
 - MUST report the PR creation success and the assignment failures separately if the PR is created but reviewer/assignee assignment partially fails
 - MUST stop and report when neither an MCP server nor a CLI tool is available for the target repository
