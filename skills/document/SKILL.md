@@ -34,7 +34,7 @@ Create documentation with clear structure, actionable content, and appropriate d
 
 ## References
 
-ONLY READ the most relevant reference to create/update documentation:
+ONLY READ the most relevant reference(s) to create/update documentation:
 
 | Reference | Best for | Never for | Content focus |
 | --- | --- | --- | --- |

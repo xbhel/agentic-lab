@@ -33,16 +33,16 @@ Point `~/.copilot` at this repo so Copilot can load the workspace instructions a
 **Linux/macOS**
 
 ```bash
-ln -s /path/to/agentic-lab ~/.copilot
+ln -s /path/to/skills ~/.copilot/skills
 ```
 
 **Windows (PowerShell)**
 
 ```powershell
 # Requires Developer Mode or Admin. Use Junction if SymbolicLink is unavailable.
-New-Item -ItemType SymbolicLink -Path "$HOME\.copilot" -Target "C:\path\to\agentic-lab"
+New-Item -ItemType SymbolicLink -Path "$HOME\.copilot\skills" -Target "C:\path\to\skills"
 # or
-New-Item -ItemType Junction -Path "$HOME\.copilot" -Target "C:\path\to\agentic-lab"
+New-Item -ItemType Junction -Path "$HOME\.copilot\skills" -Target "C:\path\to\skills"
 ```
 
 ### Load skills in Codex
@@ -52,7 +52,7 @@ Codex looks for skills at `~/.codex/skills/<skill-name>/SKILL.md`. It does not s
 **Linux/macOS**
 
 ```bash
-source="/path/to/agentic-lab/skills"
+source="/path/to/skills"
 for dir in "$source"/*/; do
   ln -s "$dir" "$HOME/.codex/skills/$(basename "$dir")"
 done
